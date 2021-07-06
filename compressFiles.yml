@@ -1,0 +1,7 @@
+- name: ghaction-CompressFiles
+  uses: StefH/ghaction-CompressFiles@v1
+  with:
+    path: '.'
+    extensions: '.js,.css,.html,.svg,.png,.jpg,.jpeg,.gif,.ico,.webp,.webm,.json,.manifest,.md'
+    tools: 'brotli,gzip'
+    depth: '5'
