@@ -1,227 +1,300 @@
 * {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-family: sans-serif;
-  user-select: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: sans-serif;
+    user-select: none;
 }
+
 body {
-  width: 100vw;
-  height: 100vh;
-  background: #fff url(wallpaper/light.jpg) center center/cover no-repeat;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr 40px;
+    width: 100vw;
+    height: 100vh;
+    background: #fff url(wallpaper/light.jpg) center center/cover no-repeat;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 40px;
 }
+
 .taskbar {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 40px;
 }
+
 .center,
 .right {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  align-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
 }
+
 .center {
-  grid-area: 1/2/2/3;
-  justify-content: center;
+    grid-area: 1/2/2/3;
+    justify-content: center;
 }
+
 .right {
-  grid-area: 1/3/2/4;
-  justify-content: flex-end;
-  margin-right: 10px;
-  column-gap: 5px;
+    grid-area: 1/3/2/4;
+    justify-content: flex-end;
+    margin-right: 10px;
+    column-gap: 5px;
 }
+
 .taskbar {
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
+
 .center img,
 .start-icons img {
-  display: inline-block;
-  width: 25px;
-  cursor: pointer;
-  margin: 2px;
-  padding: 5px;
+    display: inline-block;
+    width: 25px;
+    cursor: pointer;
+    margin: 2px;
+    padding: 5px;
 }
+
 .action-center-button:focus,
 .action-center-button:hover,
 .center img:focus,
 .center img:hover,
-.right > img:focus,
-.right > img:hover,
+.right>img:focus,
+.right>img:hover,
 .start-icons figure:focus,
 .start-icons figure:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
+
 #context-menu {
-  position: fixed;
-  z-index: 10000;
-  width: max-content;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.125);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-radius: 10px;
-  transform: scale(0);
-  transform-origin: top left;
-  padding: 5px;
-  /*display: none;*/
+    position: fixed;
+    z-index: 10000;
+    width: max-content;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.125);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 10px;
+    transform: scale(0);
+    transform-origin: top left;
+    padding: 5px;
+    /*display: none;*/
 }
+
 #context-menu.visible {
-  /*display: block;*/
-  transform: scale(1);
-  transition: transform 200ms ease-in-out;
+    /*display: block;*/
+    transform: scale(1);
+    transition: transform 200ms ease-in-out;
 }
+
 #context-menu .item {
-  display: flex;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 5px;
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
 }
+
 #context-menu .item:hover {
-  background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.5);
 }
+
 #context-menu img {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
-#context-menu > div:nth-child(4) {
-  padding-left: 31px;
+
+#context-menu>div:nth-child(4) {
+    padding-left: 31px;
 }
-#context-menu > div > img:nth-child(1) {
-  margin-right: 10px;
+
+#context-menu>div>img:nth-child(1) {
+    margin-right: 10px;
 }
-#context-menu > div > img:nth-child(2) {
-  position: absolute;
-  right: 5px;
+
+#context-menu>div>img:nth-child(2) {
+    position: absolute;
+    right: 5px;
 }
+
 .start {
-  height: 600px;
-  width: 530.63px;
-  margin-left: calc(50% - 265.315px);
-  position: absolute;
-  bottom: 50px;
-  background-color: rgb(255, 255, 255, 0.5);
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(20px);
-  border-radius: 7px;
-  transform: translateY(660px);
-  opacity: 0.5;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 600px;
+    width: 530.63px;
+    margin-left: calc(50% - 265.315px);
+    position: absolute;
+    bottom: 50px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+    transform: translateY(660px);
+    opacity: 0.5;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 .show-start {
-  transform: translateX(0);
-  opacity: 1;
+    transform: translateX(0);
+    opacity: 1;
 }
+
 .start .search {
-  text-align: center;
-  padding: 30px 30px 0;
+    text-align: center;
+    padding: 30px 30px 0;
 }
+
 .start .search input {
-  padding: 10px 0 10px 25px;
-  border: 0;
-  border-radius: 3px;
-  border-bottom: 2.5px solid #2184e2;
-  width: 450px;
-  outline: 0;
+    padding: 10px 0 10px 25px;
+    border: 0;
+    border-radius: 3px;
+    border-bottom: 2.5px solid #2184e2;
+    width: 450px;
+    outline: 0;
 }
+
 .others {
-  position: absolute;
-  padding: 10px 50px;
-  width: 450px;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(255 255 255 / 20%);
-  border-top: 1.5px solid grey;
+    position: absolute;
+    padding: 10px 50px;
+    width: 450px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255 255 255 / 20%);
+    border-top: 1.5px solid grey;
 }
+
 .user img {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
 }
+
 .user {
-  display: flex;
+    display: flex;
 }
+
 .user span {
-  padding: 8.5px;
-  font-size: small;
+    padding: 8.5px;
+    font-size: small;
 }
+
 .others #shutdown {
-  width: 25px;
+    width: 25px;
 }
+
 .pinned .start-icons {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  justify-items: center;
-  padding: 0 30px;
-  align-items: end;
-  grid-gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    padding: 0 30px;
+    align-items: end;
+    grid-gap: 5px;
 }
+
 .desktopIcons {
-  display: grid;
-  padding: 10px;
-  justify-content: start;
+    display: grid;
+    padding: 5px;
+    justify-content: start;
 }
+
 .desktopIcons img {
-  width: 40px;
+    width: 40px;
 }
+
 figure {
-  text-align: center;
-  font: status-bar;
-  width: 100%;
-  cursor: pointer;
+    text-align: center;
+    font: status-bar;
+    width: 70px;
+    cursor: pointer;
+    margin: 0px 0px 5px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.iconName {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+
 .start-top-elements {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  margin: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 20px 40px;
 }
+
 .start-top-elements span {
-  font-size: smaller;
-  font-weight: 700;
+    font-size: smaller;
+    font-weight: 700;
 }
+
 .search label {
-  position: relative;
+    position: relative;
 }
+
 .search label:before {
-  content: "";
-  position: absolute;
-  left: 7px;
-  top: 2px;
-  opacity: 0.7;
-  bottom: 0;
-  width: 50px;
-  background: url(icons/search.svg) no-repeat;
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    opacity: 0.7;
+    bottom: 0;
+    width: 50px;
+    background: url(icons/search.svg) no-repeat;
 }
+
 .search input {
-  padding: 10px 30px;
+    padding: 10px 30px;
 }
+
 .right img {
-  width: 15px;
-  padding: 5px;
+    width: 15px;
+    padding: 5px;
 }
+
+
+/* unconnect this if the wifi icon at the taskbar is tilted in windows 11 */
+
+
+/* #wifi {
+    transform: rotate(30deg);
+} */
+
 .right .action-center-button {
-  height: 30px;
-  width: 80px;
-  display: flex;
-  justify-content: center;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
 }
+
 .time-date {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: flex-end;
-  font: status-bar;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    font: status-bar;
+}
+
+
+/* styling open all apps button */
+
+.openAll {
+    background-color: #fff;
+    padding: 5px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.smallRight {
+    width: 20px;
 }
