@@ -14,8 +14,8 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [x] ~~Taskbar~~
  - [x] ~~Desktop~~
  - [x] ~~Desktop Context menu~~
+ - [x] ~~Add Boot Animation~~
  - [ ] Improve Start Menu
- - [ ] Add Boot Animation
  - [ ] Add Login Screen with username and photo
  - [ ] Add winver window
  - [ ] Add Action center

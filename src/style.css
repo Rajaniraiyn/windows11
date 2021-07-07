@@ -85,9 +85,8 @@ body {
 }
 
 #context-menu.visible {
-    /*display: block;*/
     transform: scale(1);
-    transition: transform 200ms ease-in-out;
+    transition: transform 100ms ease-in-out;
 }
 
 #context-menu .item {
@@ -198,16 +197,27 @@ body {
     display: grid;
     padding: 5px;
     justify-content: start;
+    grid-gap: 10px;
 }
 
 .desktopIcons img {
     width: 40px;
 }
 
+.desktopIcons figure {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.desktopIcons figure:hover,
+.desktopIcons figure:focus {
+    background: #ffffff4d;
+}
+
 figure {
     text-align: center;
     font: status-bar;
-    width: 70px;
+    width: 71.9px;
     cursor: pointer;
     margin: 0px 0px 5px 0px;
     display: flex;
@@ -287,14 +297,16 @@ figure {
 
 .openAll {
     background-color: #fff;
-    padding: 5px;
+    padding: 2px 5px;
     border: none;
     outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: smaller;
+    cursor: pointer;
 }
 
 .smallRight {
-    width: 20px;
+    width: 15px;
 }

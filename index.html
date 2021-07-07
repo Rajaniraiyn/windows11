@@ -15,10 +15,46 @@
     <meta property="og:url" content="/">
     <meta property="og:image" content="/">
     <meta property="og:description" content="A simple Windows 11 experience within browser.">
-    <link rel="stylesheet" href="src/style.css">
+    <!-- For Boot Screen -->
+    <style>
+        * {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .boot,
+        .boot-animation {
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            cursor: none;
+        }
+
+        .boot-animation {
+            display: none;
+            filter: brightness(1.34) contrast(1.06);
+            background-color: white;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- Boot Elements -->
+    <div class="boot">
+        <img src="src/others/windowsLogo.svg" alt="Windows Logo" width="70" />
+        <img src="src/others/bootLoader.gif" alt="Windows boot loader" width="50" />
+    </div>
+    <div class="boot-animation">
+        <video preload="auto" width="150" height="150">
+            <source src="src/others/bootAnimation.webm#t=0.6" type="video/webm">
+            <source src="src/others/bootAnimation.mp4#t=0.6" type="video/mp4">
+        </video>
+    </div>
+    <link rel="stylesheet" href="src/style.css">
     <div class="desktop">
         <div class="desktopIcons">
             <!-- desktop icon 1 -->
@@ -47,7 +83,7 @@
         <div class="pinned">
             <div class="start-top-elements">
                 <span>Pinned</span>
-                <button class="openAll">All apps <img src="src/icons/right.svg" alt="open all apps" class="smallRight"></button>
+                <button class="openAll">All apps <img src="src/icons/right.svg" alt="open all apps"class="smallRight"></button>
             </div>
             <div class="start-icons">
                 <figure>
@@ -179,6 +215,19 @@
 
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>
+    <!-- Boot scripts -->
+    <script>
+        window.onload = () => {
+            setTimeout(() => {
+                document.querySelector(".boot").remove()
+                document.querySelector(".boot-animation").setAttribute("style", "display:flex")
+                document.querySelector(".boot-animation video").play()
+                document.querySelector(".boot-animation video").onended = () => {
+                    document.querySelector(".boot-animation").remove()
+                }
+            }, 2e3)
+        }
+    </script>
 </body>
 
 </html>
