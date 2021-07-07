@@ -21,22 +21,33 @@
 <body>
     <div class="desktop">
         <div class="desktopIcons">
+            <!-- desktop icon 1 -->
             <figure>
                 <img src="src/icons/Computer.png" alt="Windows 11 This PC icon">
-                <figcaption>This PC</figcaption>
+                <figcaption class="iconName">This PC</figcaption>
+            </figure>
+            <!-- desktop icon 2 -->
+            <figure>
+                <img src="src/icons/vscode.png" alt="Visual Studio Code Icon">
+                <figcaption class="iconName">Visual Studio Code</figcaption>
+            </figure>
+            <!-- desktop icon 3 -->
+            <figure>
+                <img src="src/icons/edge.svg" alt="Microsoft Edge Icon">
+                <figcaption class="iconName">Microsoft Edge</figcaption>
             </figure>
         </div>
     </div>
     <div class="start">
         <div class="search">
             <label>
-                <input type="text" placeholder="Type here to search">
+                <input type="text" placeholder="Type here to search" id="searchBar">
             </label>
         </div>
         <div class="pinned">
             <div class="start-top-elements">
                 <span>Pinned</span>
-                <button>All apps</button>
+                <button class="openAll">All apps <img src="src/icons/right.svg" alt="open all apps" class="smallRight"></button>
             </div>
             <div class="start-icons">
                 <figure>
@@ -116,7 +127,7 @@
         <div class="recommended">
             <div class="start-top-elements">
                 <span>Recommended</span>
-                <button>More</button>
+                <button class="openAll">More<img src="src/icons/right.svg" alt="open all apps" class="smallRight"></button>
             </div>
         </div>
         <div class="others">
@@ -130,7 +141,7 @@
     <div class="taskbar">
         <div class="center">
             <img src="src/icons/startButton.png" alt="Windows 11 start icon">
-            <img src="src/icons/search.svg" alt="Windows 11 Search icon">
+            <img src="src/icons/search.svg" alt="Windows 11 Search icon" id="searchIcon">
             <img src="src/icons/taskView.svg" alt="Windows 11 Task View icon">
             <img src="src/icons/widgets.svg" alt="Windows 11 widgets">
             <img src="src/icons/teams.svg" alt="Microsoft Teams icon">
@@ -141,7 +152,7 @@
         <div class="right">
             <img src="src/icons/up.svg" alt="Up arrow">
             <div class="action-center-button">
-                <img src="src/icons/wifi.svg" alt="WiFi">
+                <img src="src/icons/wifi.svg" alt="WiFi" id="wifi">
                 <img src="src/icons/speaker.svg" alt="Speaker">
                 <img src="src/icons/battery.svg" alt="Battery Full">
             </div>
@@ -152,22 +163,18 @@
         </div>
     </div>
     <div id="context-menu">
-        <div class="item"><img src="src/icons/view.svg" alt="View"> View <img src="src/icons/right.svg"
-                alt="Right arrow"></div>
-        <div class="item"><img src="src/icons/sort.svg" alt="Sort"> Sort by <img src="src/icons/right.svg"
-                alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/view.svg" alt="View"> View <img src="src/icons/right.svg" alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/sort.svg" alt="Sort"> Sort by <img src="src/icons/right.svg" alt="Right arrow"></div>
         <hr>
         <div class="item">Paste Shortcut</div>
-        <div class="item"><img src="src/icons/new.svg" alt="New"> New item <img src="src/icons/right.svg"
-                alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/new.svg" alt="New"> New item <img src="src/icons/right.svg" alt="Right arrow"></div>
         <hr>
         <div class="item"><img src="src/icons/display.svg" alt="Display"> Display settings</div>
         <div class="item"><img src="src/icons/personalize.png" alt="Personalize"> Personalize</div>
         <hr>
         <div class="item"><img src="src/icons/terminal.png" alt="Terminal"> Open in Windows Terminal</div>
         <hr>
-        <div class="item"><img src="src/icons/more.svg" alt="More"> Show more options <img src="src/icons/right.svg"
-                alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/more.svg" alt="More"> Show more options <img src="src/icons/right.svg" alt="Right arrow"></div>
     </div>
 
     <script src="src/start.js"></script>
