@@ -5,7 +5,13 @@ document.addEventListener("click", (e) => {
         // making the search button at the taskbar work
         console.log("search icon clicked");
         document.querySelector(".start").classList.add("show-start");
-        document.getElementById("searchBar").focus();
+        //fixing wired start menu entry when search button clicked directly
+        if (document.querySelector(".start").classList.contains("show-start")) {
+            setTimeout(() => {
+                document.getElementById("searchBar").focus();
+            }, 0.4e3)
+        }
+        else document.getElementById("searchBar").focus();
     }
     // ? close the menu if the user clicks outside of it
     else if (e.target == document.getElementById("searchBar")) {
