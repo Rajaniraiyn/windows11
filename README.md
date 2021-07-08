@@ -32,7 +32,7 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [ ] Improved Icons in SVG format
 
 ## 🙏Special Thanks🙏 
-![Shudarsan Regmi](https://user-images.githubusercontent.com/72294760/124927550-639ef500-e01c-11eb-94c0-ceda2d06cbd9.png)
+[![Shudarsan Regmi](https://user-images.githubusercontent.com/72294760/124927550-639ef500-e01c-11eb-94c0-ceda2d06cbd9.png)](https://github.com/ShudarsanRegmi)
 
 ---
 Guys Thankyou for spend your precious time for this project. I am continually working on it to improve it. Anyone interested can help me out.
