@@ -21,7 +21,7 @@
             margin: 0;
             overflow: hidden;
         }
-
+        
         .boot,
         .boot-animation {
             width: 100vw;
@@ -33,7 +33,7 @@
             align-items: center;
             cursor: none;
         }
-
+        
         .boot-animation {
             display: none;
             filter: brightness(1.34) contrast(1.06);
@@ -43,13 +43,42 @@
 </head>
 
 <body>
+    <!-- password dialog -->
+    <div class="passwordDialog">
+        <div class="userProfile"><img src="src/icons/user.png" alt="User Profile"></div>
+        <div class="username">User Name</div>
+        <input type="password" placeholder="PIN" id="passwordField">
+        <span class="hint">Your password is: 12345</span>
+        <div class="forgotOption">I forgot my pin</div>
+        <div class="otherSignInOptions">Sign-in options</div>
+    </div>
+    <!-- Lock Screen Box -->
+    <div id="lockScreen">
+        <div id="timeBox">
+            <span class="time">02:55</span>
+            <span class="date">Thursday, June 2017</span>
+        </div>
+    </div>
+
+    <!-- making a power on div and make user click a button so that we can autoplay videos -->
+    <div class="powerOnBox">
+        <div>
+            <img src="src/icons/shutdown.png" alt="Power On Button" id="powerOnBtn">
+            <figcaption>Click to start the machine</figcaption>
+        </div>
+    </div>
     <!-- Boot Elements -->
     <div class="boot">
         <img src="src/others/windowsLogo.svg" alt="Windows Logo" width="70" />
         <img src="src/others/bootLoader.gif" alt="Windows boot loader" width="50" />
     </div>
     <div class="boot-animation">
-        <video preload="auto" width="150" height="150">
+        <!-- does not work in google chrome if the video is not muted.
+        works in firefox if autoplay permission for the site is granted.
+    works even on chrome with certain criteria fulfilled:
+    For more details: 
+    https://developers.google.com/web/updates/2017/09/autoplay-policy-changes -->
+        <video preload="auto" width="150" height="150" id="startupVideo">
             <source src="src/others/bootAnimation.webm#t=0.6" type="video/webm">
             <source src="src/others/bootAnimation.mp4#t=0.6" type="video/mp4">
         </video>
@@ -215,19 +244,7 @@
 
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>
-    <!-- Boot scripts -->
-    <script>
-        window.onload = () => {
-            setTimeout(() => {
-                document.querySelector(".boot").remove()
-                document.querySelector(".boot-animation").setAttribute("style", "display:flex")
-                document.querySelector(".boot-animation video").play()
-                document.querySelector(".boot-animation video").onended = () => {
-                    document.querySelector(".boot-animation").remove()
-                }
-            }, 2e3)
-        }
-    </script>
+    <script src="src/boot.js"></script>
 </body>
 
 </html>
