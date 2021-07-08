@@ -449,3 +449,93 @@ figure {
     align-self: flex-start;
     margin: 2px;
 }
+
+.window {
+    position: absolute;
+    background-color: #fff;
+}
+
+.runDialog {
+    width: 360px;
+}
+
+.runIconSmall {
+    width: 25px;
+    margin: 5px;
+}
+
+#runCloser {
+    width: 20px;
+    cursor: pointer;
+}
+
+.runHeader {
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#runCloser {
+    position: absolute;
+    right: 5px;
+}
+
+.runBody {
+    /* background-color: lightcyan; */
+    padding: 10px 5px;
+}
+
+.runBodyMessage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.runBodyMessage>span {
+    font-size: 13px;
+}
+
+#runIconBody {
+    width: 60px;
+    margin: 10px 10px 5px 5px;
+}
+
+label[for="runInputField"] {
+    font-size: 14px;
+}
+
+#runInputField {
+    width: 80%;
+    height: 17px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+#runInputField:focus {
+    border: 1px solid #FBFFFF;
+    outline: 1px solid blue;
+    ;
+}
+
+.runFooter {
+    background-color: #F1F0F1;
+    margin-top: 30px;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.runFooter>button {
+    font-size: 15px;
+    padding: 5px 9px;
+    background-color: #fff;
+    border: 1px solid lightgray;
+    outline: none;
+    margin: 0px 5px;
+    width: 80px;
+    border-radius: 2px;
+    cursor: pointer;
+}

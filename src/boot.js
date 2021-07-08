@@ -1,6 +1,15 @@
 // accessig required elements
 let powerOnBox = document.querySelector(".powerOnBox");
 let powerOnBtn = document.getElementById("powerOnBtn");
+// turning off the boot process for development purpose
+function skipBoot() {
+    powerOnBox.style.display = "none";
+    document.querySelector(".desktop").style.display = "block";
+    document.querySelector(".taskbar").style.display = "grid";
+    document.querySelector(".start").style.display = "block";
+    document.body.style.background = "#fff url(src/wallpaper/light.jpg) center center/cover no-repeat";
+}
+skipBoot();
 
 powerOnBtn.addEventListener("click", event => {
     fullScreen();
