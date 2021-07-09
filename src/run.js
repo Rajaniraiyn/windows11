@@ -11,7 +11,6 @@ document.body.addEventListener("keydown", event => {
 
 })
 runInputField.addEventListener("keyup", event => {
-    console.log(runInputField.value);
     if (searchPrograms(runInputField.value)) {
         document.getElementById("runOkBtn").classList.remove("disabledButton")
     } else {
@@ -20,7 +19,7 @@ runInputField.addEventListener("keyup", event => {
     // execute the program if user press the enter button
     if (event.key == "Enter") {
         if (searchPrograms(runInputField.value)) {
-            executeProgram();
+            executeProgram(searchPrograms(runInputField.value));
         } else {
             alert("no program exist");
         }
@@ -32,26 +31,21 @@ runInputField.addEventListener("keyup", event => {
 
 });
 
-let allPrograms = ["winver", "powershell"];
+let allPrograms = ["winver", "powershell", "terminal"];
 
 function searchPrograms(givenProgram) {
     if (allPrograms.includes(givenProgram)) {
-        return true;
+        return givenProgram;
     } else {
         return false;
     }
 }
 
-function executeProgram() {
-    console.log("executing")
-    let win1 = new Window("winver", "black", "white", "src/icons/runicon.png");
+function executeProgram(programName) {
+    let win1 = new Window(programName, "black", "white", "src/icons/runicon.png");
     win1.createWindow();
 
 }
-// let win1 = new Window("winver", "black", "white", "src/icons/runicon.png");
-// win1.createWindow();
-// This js file is for managing all windows
-// Accessing required elements
 let windowCrossers = document.getElementsByClassName("windowCrosser");
 Array.from(windowCrossers).forEach(item => {
     item.addEventListener("click", event => {

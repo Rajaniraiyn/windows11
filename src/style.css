@@ -455,7 +455,8 @@ figure {
     background-color: #fff;
     min-height: 100px;
     min-width: 200px;
-    -webkit-user-drag: element;
+    resize: both;
+    overflow: auto;
 }
 
 .runDialog {
