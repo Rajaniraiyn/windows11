@@ -32,6 +32,25 @@ class Window {
             // creating a optionsWrapper 
             let optionsWrapper = document.createElement("div");
             optionsWrapper.classList.add("optionsWrapper");
+            // minimizer
+            if (this.btns.includes("min")) {
+                let minimizer = document.createElement("img");
+                minimizer.src = "src/icons/minimize.svg";
+                minimizer.alt = "minimize" + this.title;
+                minimizer.classList.add("windowOptions", "windowMinimizer");
+                optionsWrapper.appendChild(minimizer);
+
+            }
+            // maximizer 
+            if (this.btns.includes("max")) {
+                let maximizer = document.createElement("img");
+                maximizer.src = "src/icons/maximize.svg";
+                maximizer.alt = "maximize" + this.title;
+                maximizer.classList.add("windowOptions", "windowMaximizer");
+                optionsWrapper.appendChild(maximizer);
+
+            }
+
             // crosser
             if (this.btns.includes("cross")) {
                 let cross = document.createElement("img");
@@ -43,24 +62,6 @@ class Window {
 
             }
 
-            // maximizer 
-            if (this.btns.includes("max")) {
-                let maximizer = document.createElement("img");
-                maximizer.src = "src/icons/maximize.svg";
-                maximizer.alt = "maximize" + this.title;
-                maximizer.classList.add("windowOptions", "windowMaximizer");
-                optionsWrapper.appendChild(maximizer);
-
-            }
-            // minimizer
-            if (this.btns.includes("min")) {
-                let minimizer = document.createElement("img");
-                minimizer.src = "src/icons/minimize.svg";
-                minimizer.alt = "minimize" + this.title;
-                minimizer.classList.add("windowOptions", "windowMinimizer");
-                optionsWrapper.appendChild(minimizer);
-
-            }
             window.appendChild(windowTitleBar);
 
 

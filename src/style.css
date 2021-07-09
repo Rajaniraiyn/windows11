@@ -463,7 +463,7 @@ figure {
     width: 360px;
     position: absolute;
     bottom: 6%;
-    /* display: none; */
+    display: none;
 }
 
 .runIconSmall {

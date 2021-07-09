@@ -9,7 +9,7 @@ function skipBoot() {
     document.querySelector(".start").style.display = "block";
     document.body.style.background = "#fff url(src/wallpaper/light.jpg) center center/cover no-repeat";
 }
-skipBoot();
+// skipBoot();
 
 powerOnBtn.addEventListener("click", event => {
     fullScreen();

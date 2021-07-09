@@ -20,6 +20,7 @@ runInputField.addEventListener("keyup", event => {
     if (event.key == "Enter") {
         if (searchPrograms(runInputField.value)) {
             executeProgram(searchPrograms(runInputField.value));
+            runDialog.style.display = "none";
         } else {
             alert("no program exist");
         }
