@@ -241,10 +241,27 @@
         <hr>
         <div class="item"><img src="src/icons/more.svg" alt="More"> Show more options <img src="src/icons/right.svg" alt="Right arrow"></div>
     </div>
+    <!-- making run dailog -->
+    <div class="runDialog window">
+        <div class="runHeader"> <img src="src/icons/runicon.png" alt="run icon" class="runIconSmall"> <span>Run</span>
+            <div class="optionsWrapper"><img src="src/icons/cross.svg" alt="close" class="windowOptions windowCrosser"></div>
+        </div>
+        <div class="runBody">
+            <div class="runBodyMessage"><img src="src/icons/runicon.png" alt="run Icon" id="runIconBody"><span>Type the name of the program, folder, document or internet resources, and windows will open it for you.</span></div>
+            <label for="runInputField">Open: </label><input type="text" id="runInputField">
+        </div>
+        <div class="runFooter">
+            <button class="disabledButton" id="runOkBtn">Ok</button>
+            <button>Cancel</button>
+            <button>Browse...</button>
+        </div>
+    </div>
 
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>
     <script src="src/boot.js"></script>
+    <script src="src/window.js"></script>
+    <script src="src/run.js"></script>
 </body>
 
 </html>

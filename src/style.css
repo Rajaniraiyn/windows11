@@ -453,20 +453,21 @@ figure {
 .window {
     position: absolute;
     background-color: #fff;
+    min-height: 100px;
+    min-width: 200px;
+    -webkit-user-drag: element;
 }
 
 .runDialog {
     width: 360px;
+    position: absolute;
+    bottom: 6%;
+    /* display: none; */
 }
 
 .runIconSmall {
     width: 25px;
     margin: 5px;
-}
-
-#runCloser {
-    width: 20px;
-    cursor: pointer;
 }
 
 .runHeader {
@@ -538,4 +539,45 @@ label[for="runInputField"] {
     width: 80px;
     border-radius: 2px;
     cursor: pointer;
+}
+
+.disabledButton {
+    background-color: #F2F3F2;
+    color: #A5A2A2;
+    border: 1px solid lightgray;
+}
+
+.windowTitleBar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.smallTitleIcon {
+    width: 25px;
+}
+
+.windowTitle {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.optionsWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+}
+
+.windowOptions {
+    cursor: pointer;
+    align-self: center;
+    margin: 2px 5px 0px 0px;
+    padding: 3px 3px;
+    width: 18px;
+}
+
+.windowOptions:hover {
+    background-color: #F5F5F5;
 }
