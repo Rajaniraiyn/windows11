@@ -215,6 +215,7 @@
             <img src="src/icons/fileExplorer.png" alt="Windows 11 File Explorer icon">
             <img src="src/icons/edge.svg" alt="Windows 11 Edge icon">
             <img src="src/icons/store.png" alt="Windows 11 Store icon">
+            <img src="src/icons/keyboard.png" alt="Keyboard Meta Keys" id="keyboardOpener">
         </div>
         <div class="right">
             <img src="src/icons/up.svg" alt="Up arrow">
@@ -315,10 +316,16 @@
         </div>
     </div>
     <div class="brightness-overlay"></div>
-
+    <div id="keyboard">
+        <div class="keys" id="keyboardHider"><img src="src/icons/right.svg" alt="Hide the keyboard"></div>
+        <div class="keys" data-value="Win" id="winkey"><img src="src/icons/winkey.svg" alt=""></div>
+        <div class="keys" data-value="Alt" id="altKey">Alt</div>
+        <div class="keys" data-value="Ctrl" id="ctrlKey">Ctrl</div>
+    </div>
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>
     <script src="src/boot.js"></script>
+    <script src="src/keyboard.js"></script>
     <script src="src/taskbar.js"></script>
     <script src="src/window.js"></script>
     <script src="src/run.js"></script>
