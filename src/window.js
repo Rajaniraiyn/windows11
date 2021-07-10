@@ -39,6 +39,7 @@ class Window {
                 minimizer.alt = "minimize" + this.title;
                 minimizer.classList.add("windowOptions", "windowMinimizer");
                 optionsWrapper.appendChild(minimizer);
+                this.makeMinimizerAlive(minimizer);
 
             }
             // maximizer 
@@ -48,6 +49,7 @@ class Window {
                 maximizer.alt = "maximize" + this.title;
                 maximizer.classList.add("windowOptions", "windowMaximizer");
                 optionsWrapper.appendChild(maximizer);
+                this.makeMaximizerAlive(maximizer);
 
             }
 
@@ -58,7 +60,7 @@ class Window {
                 cross.alt = "Close" + this.title;
                 cross.classList.add("windowOptions", "windowCrosser");
                 optionsWrapper.appendChild(cross);
-                this.addListener(cross);
+                this.makeCrosserAlive(cross);
 
             }
 
@@ -71,7 +73,7 @@ class Window {
             // finally create the window
             // this.createWindow();
             this.makeDraggable(window);
-            // add listener
+            this.appendWindowToTaskBar();
         }
         // making window draggable
     makeDraggable(item) {
@@ -103,17 +105,66 @@ class Window {
             }
         }
     }
-    addListener(windowCrooser) {
+    makeCrosserAlive(windowCrooser) {
         windowCrooser.addEventListener("click", event => {
             let windows = event.target.parentNode.parentNode.parentNode;
             console.log(windows);
             if (windows.classList.contains("window")) {
-                windows.style.display = "none";
+                // windows.style.display = "none";
+                document.body.removeChild(windows);
+                this.removeWindowFromTaskBar(windows);
             } else {
                 console.log("use class 'windows' in your window and it will be closed");
             }
         })
     }
+    makeMaximizerAlive(maximizer) {
+        maximizer.addEventListener("click", event => {
+            let windows = event.target.parentNode.parentNode.parentNode;
+            // let initialDimensions =
+            if (windows.classList.contains("window")) {
+                let dimensions = document.querySelector(".desktop").getBoundingClientRect();
+                console.log(dimensions)
+                windows.style.top = dimensions.y;
+                windows.style.left = dimensions.x;
+                windows.style.width = dimensions.width + "px";
+                windows.style.height = dimensions.height + "px";
+
+            } else {
+                console.log("use class 'windows' in your window and it will be closed");
+            }
+        })
+    }
+    makeMinimizerAlive(minimizer) {
+        minimizer.addEventListener("click", event => {
+            let windows = event.target.parentNode.parentNode.parentNode;
+            setTimeout(() => {
+                windows.style.display = "none";
+            }, 200)
+        })
+
+    }
+    appendWindowToTaskBar() {
+        let taskBarCenterBox = document.querySelector(".center");
+        console.log(this.icon);
+        let img = document.createElement("img");
+        img.src = this.icon;
+        img.alt = "Windows 11" + this.title + "icon";
+        img.id = this.title;
+        taskBarCenterBox.appendChild(img);
+    }
+    removeWindowFromTaskBar(windows) {
+        let taskBarCenterBox = document.querySelector(".center");
+        let windowToRemove = windows.children[0].children[1].innerText;
+        let taskBarCenterIcons = taskBarCenterBox.children;
+        Array.from(taskBarCenterIcons).some(item => { // not using foreach because we can't exit out of foreach loop
+            if (item.id == windowToRemove) {
+                taskBarCenterBox.removeChild(item);
+                return true;
+            }
+        })
+
+    }
 }
-// let win1 = new Window("winver", "black", "white", "src/icons/runicon.png");
-// win1.createWindow();
+let win1 = new Window("winver", "black", "white", "src/icons/runicon.png");
+win1.createWindow();
