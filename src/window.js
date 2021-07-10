@@ -145,26 +145,24 @@ class Window {
 
     }
     appendWindowToTaskBar() {
-        let taskBarCenterBox = document.querySelector(".center");
-        console.log(this.icon);
         let img = document.createElement("img");
         img.src = this.icon;
         img.alt = "Windows 11" + this.title + "icon";
+        // check if the window window already exists and assign a new id if the window already exists
         img.id = this.title;
-        taskBarCenterBox.appendChild(img);
+
+        Taskbar.centerBox.appendChild(img);
     }
     removeWindowFromTaskBar(windows) {
-        let taskBarCenterBox = document.querySelector(".center");
         let windowToRemove = windows.children[0].children[1].innerText;
-        let taskBarCenterIcons = taskBarCenterBox.children;
-        Array.from(taskBarCenterIcons).some(item => { // not using foreach because we can't exit out of foreach loop
+        Array.from(Taskbar.allIcons).some(item => { // not using foreach because we can't exit out of foreach loop
             if (item.id == windowToRemove) {
-                taskBarCenterBox.removeChild(item);
+                Taskbar.centerBox.removeChild(item);
                 return true;
             }
         })
 
     }
 }
-let win1 = new Window("winver", "black", "white", "src/icons/runicon.png");
-win1.createWindow();
+// let win1 = new Window("winver", "black", "white", "src/icons/runicon.png");
+// win1.createWindow();
