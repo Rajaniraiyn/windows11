@@ -73,7 +73,9 @@ class Window {
             // finally create the window
             // this.createWindow();
             this.makeDraggable(window);
-            this.appendWindowToTaskBar();
+            // this.appendWindowToTaskBar(window);
+            Taskbar.addItem(this.title, this.icon, window);
+
         }
         // making window draggable
     makeDraggable(item) {
@@ -108,11 +110,12 @@ class Window {
     makeCrosserAlive(windowCrooser) {
         windowCrooser.addEventListener("click", event => {
             let windows = event.target.parentNode.parentNode.parentNode;
-            console.log(windows);
             if (windows.classList.contains("window")) {
                 // windows.style.display = "none";
                 document.body.removeChild(windows);
-                this.removeWindowFromTaskBar(windows);
+                // this.removeWindowFromTaskBar(windows);
+                Taskbar.removeItem(windows);
+                return;
             } else {
                 console.log("use class 'windows' in your window and it will be closed");
             }
@@ -141,25 +144,6 @@ class Window {
             setTimeout(() => {
                 windows.style.display = "none";
             }, 200)
-        })
-
-    }
-    appendWindowToTaskBar() {
-        let img = document.createElement("img");
-        img.src = this.icon;
-        img.alt = "Windows 11" + this.title + "icon";
-        // check if the window window already exists and assign a new id if the window already exists
-        img.id = this.title;
-
-        Taskbar.centerBox.appendChild(img);
-    }
-    removeWindowFromTaskBar(windows) {
-        let windowToRemove = windows.children[0].children[1].innerText;
-        Array.from(Taskbar.allIcons).some(item => { // not using foreach because we can't exit out of foreach loop
-            if (item.id == windowToRemove) {
-                Taskbar.centerBox.removeChild(item);
-                return true;
-            }
         })
 
     }

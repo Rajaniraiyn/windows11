@@ -9,7 +9,7 @@ function skipBoot() {
     document.querySelector(".start").style.display = "block";
     document.body.style.background = "#fff url(src/wallpaper/light.jpg) center center/cover no-repeat";
 }
-skipBoot();
+// skipBoot();
 
 powerOnBtn.addEventListener("click", event => {
     fullScreen();
@@ -86,7 +86,7 @@ function passwordPhase() {
         lockScreen.style.filter = "blur(8px)";
         passwordDialog.style.display = "flex";
         passwordField.focus()
-        // check if user enters correct password
+            // check if user enters correct password
         passwordField.addEventListener("keyup", event => {
             if (passwordField.value == "12345") {
                 console.log("login was successful");
