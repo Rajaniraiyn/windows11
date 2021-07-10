@@ -112,7 +112,8 @@
         <div class="pinned">
             <div class="start-top-elements">
                 <span>Pinned</span>
-                <button class="openAll">All apps <img src="src/icons/right.svg" alt="open all apps"class="smallRight"></button>
+                <button class="openAll">All apps <img src="src/icons/right.svg" alt="open all apps"
+                        class="smallRight"></button>
             </div>
             <div class="start-icons">
                 <figure>
@@ -192,7 +193,8 @@
         <div class="recommended">
             <div class="start-top-elements">
                 <span>Recommended</span>
-                <button class="openAll">More<img src="src/icons/right.svg" alt="open all apps" class="smallRight"></button>
+                <button class="openAll">More<img src="src/icons/right.svg" alt="open all apps"
+                        class="smallRight"></button>
             </div>
         </div>
         <div class="others">
@@ -219,7 +221,7 @@
             <div class="action-center-button">
                 <img src="src/icons/wifi.svg" alt="WiFi" id="wifi">
                 <img src="src/icons/speaker.svg" alt="Speaker">
-                <img src="src/icons/battery.svg" alt="Battery Full">
+                <img src="src/icons/batteryFull.svg" alt="Battery Full">
             </div>
             <div class="time-date">
                 <span></span>
@@ -227,21 +229,81 @@
             </div>
         </div>
     </div>
+    <div class="action-center">
+        <div class="buttons">
+            <figure>
+                <div>
+                    <img src="src/icons/wifi.svg" alt="WiFi Icon">
+                    <img src="src/icons/right.svg" alt="Right Icon">
+                </div>
+                <figcaption>WiFi</figcaption>
+            </figure>
+            <figure>
+                <img src="src//icons/bluetooth.svg" alt="Bluetooth Icon">
+                <figcaption>Bluetooth</figcaption>
+            </figure>
+            <figure>
+                <img src="src/icons/airplane.svg" alt="Airplane Icon">
+                <figcaption>Airplane Mode</figcaption>
+            </figure>
+            <figure>
+                <img src="src/icons/batterySaver.svg" alt="Battery Saver Icon">
+                <figcaption>Battery Saver</figcaption>
+            </figure>
+            <figure>
+                <img src="src/icons/focusAssist.svg" alt="Focus Assist Icon">
+                <figcaption>Focus Assist</figcaption>
+            </figure>
+            <figure>
+                <div>
+                    <img src="src/icons/accessability.svg" alt="Accessability Icon">
+                    <img src="src/icons/right.svg" alt="Right Icon">
+                </div>
+                <figcaption>Accessability</figcaption>
+            </figure>
+        </div>
+        <div class="sliders">
+            <div class="brightness">
+                <img src="src/icons/brightness.svg" alt="Brightness Icon">
+                <input type="range" min="0" max="100" step="1" value="100">
+            </div>
+            <div class="volume">
+                <img src="src/icons/speaker.svg" alt="Speaker Icon">
+                <input type="range" min="0" max="100" step="1" value="100">
+                <img src="src/icons/right.svg" alt="Right Icon">
+            </div>
+        </div>
+        <div class="ac-bottom">
+            <div class="battery">
+                <img src="src/icons/batteryFull.svg" alt="Battery Icon">
+                <span></span>
+            </div>
+            <div class="options">
+                <img src="src/icons/edit.svg" alt="Edit Icon">
+                <img src="src/icons/options.svg" alt="Options Icon">
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="src/actionCenter.css">
     <div id="context-menu">
-        <div class="item"><img src="src/icons/view.svg" alt="View"> View <img src="src/icons/right.svg" alt="Right arrow"></div>
-        <div class="item"><img src="src/icons/sort.svg" alt="Sort"> Sort by <img src="src/icons/right.svg" alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/view.svg" alt="View"> View <img src="src/icons/right.svg"
+                alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/sort.svg" alt="Sort"> Sort by <img src="src/icons/right.svg"
+                alt="Right arrow"></div>
         <hr>
         <div class="item">Paste Shortcut</div>
-        <div class="item"><img src="src/icons/new.svg" alt="New"> New item <img src="src/icons/right.svg" alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/new.svg" alt="New"> New item <img src="src/icons/right.svg"
+                alt="Right arrow"></div>
         <hr>
         <div class="item"><img src="src/icons/display.svg" alt="Display"> Display settings</div>
         <div class="item"><img src="src/icons/personalize.png" alt="Personalize"> Personalize</div>
         <hr>
         <div class="item"><img src="src/icons/terminal.png" alt="Terminal"> Open in Windows Terminal</div>
         <hr>
-        <div class="item"><img src="src/icons/more.svg" alt="More"> Show more options <img src="src/icons/right.svg" alt="Right arrow"></div>
+        <div class="item"><img src="src/icons/more.svg" alt="More"> Show more options <img src="src/icons/right.svg"
+                alt="Right arrow"></div>
     </div>
-    <!-- making run dailog -->
+    <!-- making run dialog -->
     <div class="runDialog window">
         <div class="runHeader"> <img src="src/icons/runicon.png" alt="run icon" class="runIconSmall"> <span>Run</span>
             <div class="optionsWrapper"><img src="src/icons/cross.svg" alt="close" class="windowOptions windowCrosser"></div>
@@ -256,6 +318,7 @@
             <button>Browse...</button>
         </div>
     </div>
+    <div class="brightness-overlay"></div>
 
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>

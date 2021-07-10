@@ -1,0 +1,206 @@
+.action-center {
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    z-index: 90;
+    width: 300px;
+    height: 320px;
+    background-color: rgb(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 7px;
+    transform: translateY(660px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 2fr 1fr;
+    grid-gap: 5px;
+    padding: 0 10px;
+}
+.action-center .buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.action-center .buttons img {
+    padding: 10px 30px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 7px;
+    cursor: pointer;
+}
+.action-center img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.buttons div {
+    display: flex;
+    flex-direction: row;
+}
+.sliders {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+}
+.sliders .brightness {
+    display: flex;
+    grid-template-rows: 1fr 5fr 1fr;
+    align-items: center;
+    justify-content: flex-start;
+}
+.brightness img {
+    margin-right: 10px;
+}
+.sliders .volume {
+    display: flex;
+    grid-template-rows: 1fr 5fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+}
+.action-center figure {
+    width: 80px;
+    margin: auto;
+    cursor: auto;
+}
+.ac-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.action-center .buttons figure div img {
+    padding: 10px;
+}
+div.buttons div img:nth-child(1) {
+    border-radius: 7px 0 0 7px;
+}
+div.buttons div img:nth-child(2) {
+    border-radius: 0 7px 7px 0;
+}
+.action-center figcaption {
+    margin-top: 10px;
+}
+.buttons figure div:hover,
+.buttons figure div:focus{
+    background-color: #005fba;
+    border-radius: 7px;
+}
+.buttons figure div:hover img,
+.buttons figure div:focus img{
+    background-color: #ffaa58;
+    filter: invert(1);
+}
+.buttons figure img:hover,
+.buttons figure img:focus {
+    background-color: #ffaa58;
+    filter: invert(1);
+}
+.ac-bottom .battery {
+    display: flex;
+    align-items: center;
+    font-size: small;
+}
+
+/* *Custom Slider* */
+input[type=range] {
+    height: 37px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 80%;
+    background-color: transparent;
+}
+.brightness input[type=range] {
+    --track-color: linear-gradient(90deg, #005fba 100%, #888888 100%);
+}
+.volume input[type=range] {
+    --track-color: linear-gradient(90deg, #005fba 100%, #888888 100%);
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: var(--track-color);
+    border-radius: 20px;
+    border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 4px solid #FFFFFF;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #005FBA;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -9px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: var(--track-color);
+}
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000;
+    background: var(--track-color);
+    border-radius: 20px;
+    border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000;
+    border: 4px solid #FFFFFF;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: #005FBA;
+    cursor: pointer;
+}
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: var(--track-color);
+    border: 0px solid #000000;
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-fill-upper {
+    background: var(--track-color);
+    border: 0px solid #000000;
+    border-radius: 40px;
+    box-shadow: 0px 0px 0px #000000;
+}
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 1px 1px 1px #000000;
+    border: 4px solid #FFFFFF;
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: var(--track-color);
+    cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: var(--track-color);
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: var(--track-color);
+}
+.brightness-overlay {
+    width: 100vw;
+    height: 100vw;
+    z-index: 10000;
+    pointer-events: none;
+    position: absolute;
+    background-color: rgb(255 255 255 / 10%);
+}

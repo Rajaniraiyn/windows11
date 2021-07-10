@@ -20,6 +20,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 40px;
+    position: sticky;
+    z-index: 100;
 }
 
 .center,
@@ -72,7 +74,7 @@ body {
 
 #context-menu {
     position: fixed;
-    z-index: 10000;
+    z-index: 1000;
     width: max-content;
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.125);
@@ -125,6 +127,7 @@ body {
     margin-left: calc(50% - 265.315px);
     position: absolute;
     bottom: 50px;
+    z-index: 90;
     background-color: rgb(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(20px);
@@ -434,6 +437,7 @@ figure {
     font-size: 20px;
     width: 250px;
     padding: 5px;
+    outline: none;
 }
 
 .forgotOption {
@@ -452,6 +456,7 @@ figure {
 
 .window {
     position: absolute;
+    z-index: 50;
     min-height: 100px;
     min-width: 200px;
     background: rgba(255, 255, 255, .596);
@@ -466,7 +471,8 @@ figure {
 .runDialog {
     width: 360px;
     position: absolute;
-    bottom: 6%;
+    bottom: 50px;
+    left: 10px;
     display: none;
 }
 

@@ -85,6 +85,7 @@ function passwordPhase() {
         timeBox.style.transform = "translateY(-700px)";
         lockScreen.style.filter = "blur(8px)";
         passwordDialog.style.display = "flex";
+        passwordField.focus()
         // check if user enters correct password
         passwordField.addEventListener("keyup", event => {
             if (passwordField.value == "12345") {
