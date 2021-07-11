@@ -2,13 +2,19 @@ let runDialog = document.querySelector(".runDialog");
 let runInputField = document.getElementById("runInputField");
 // making the run dialog appear on pressing window + r
 document.body.addEventListener("keydown", event => {
-    if (event.metaKey && (event.key == "r" || event.key == "Ri")) {
+    function shortCutWithKeyboard(key) {
+        if (Keyboard.activeKey.includes("Win") && (event.key == "r" || event.key == "R")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    let fallBack = shortCutWithKeyboard("r"); // this for handling run shortcut key for windows
+    if (event.metaKey && (event.key == "r" || event.key == "R") || fallBack) {
         runDialog.style.display = "block";
         runInputField.focus();
         runInputField.value = null;
     }
-    // enabling the ok button if the program is available
-
 })
 runInputField.addEventListener("keyup", event => {
     if (searchPrograms(runInputField.value)) {
