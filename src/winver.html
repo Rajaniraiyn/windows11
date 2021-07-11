@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 13px;
+        user-select: none;
+        -webkit-user-drag: none;
+        /* overflow: hidden; */
+    }
+    
+    .container {
+        background-color: #F0F0F0;
+        /* padding: 20px; */
+        width: 550px;
+        height: 480px;
+        position: relative;
+    }
+    
+    .innerContainer {
+        /* border: 1px solid black; */
+        /* background-color: orange; */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .banner {
+        position: relative;
+        height: 80px;
+        /* background-color: orchid; */
+    }
+    
+    .banner>img {
+        width: 350px;
+        position: absolute;
+        left: 42%;
+        transform: translateX(-50%);
+    }
+    
+    hr {
+        margin: 0px 0px 30px 0px;
+        width: 80%;
+    }
+    
+    .text {
+        /* background-color: lightgrey; */
+        margin-left: 15%;
+    }
+    
+    .link {
+        color: #0079D4;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    .footer {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        /* background-color: orange; */
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .ok {
+        background-color: #FBFAFB;
+        font-size: 15px;
+        padding: 6px 39px;
+        border-radius: 5px;
+        outline: none;
+        border: 2px solid #2C8FDB;
+        margin-right: 30px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <div class="banner">
+                <img src="icons/banner.svg" alt="Window 11 Banner">
+            </div>
+            <hr>
+            <div class="text">
+                <p>
+                    Microsoft Windows <br> Version Dev (OS Build 21996.1) <br> &copy;Microsoft Corporation. All rights reserved. <br> <br> The Windows 11 Home Operating System and its user interface are protected by trademark and other pending or existing
+                    intellectual property rights in the United States and other countries/regions.
+                    <br> <br><br><br><br><br> This Product is Licensed Under
+                    <span class="link">Microsoft Software License  <br> Terms to: </span> <br>
+                    <span style="margin-left: 30px;">GomgomImmanuel</span>
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="ok">OK</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

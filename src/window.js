@@ -1,11 +1,12 @@
 // window class
 class Window {
-    constructor(title, titleColor = "#000", titleBgColor = "#fff", icon, btns = ['min', 'max', 'cross']) {
+    constructor(title, titleColor = "#000", titleBgColor = "#fff", icon, body, btns = ['min', 'max', 'cross']) {
         this.title = title;
         this.titleColor;
         this.titleBgColor = titleBgColor;
         this.icon = icon;
         this.btns = btns;
+        this.body = body;
     }
     createWindow() {
             // creating main window
@@ -66,7 +67,44 @@ class Window {
             window.appendChild(windowTitleBar);
             // appending options wrapper in window title bar
             windowTitleBar.appendChild(optionsWrapper)
+                //  creating window body
+            let windowBody = document.createElement("div");
+            windowBody.classList.add("windowBody");
+            let iframe = document.createElement("iframe");
+            iframe.src = this.body;
+            let frame = iframe;
+
+            // Adjusting the iframe height onload event
+            frame.onload = function()
+                // function execute while load the iframe
+                {
+                    // set the height of the iframe as 
+                    // the height of the iframe content
+                    frame.style.height =
+                        // frame.contentWindow.document.body.scrollHeight + 'px';
+                        frame.contentWindow.document.querySelector(".container").getBoundingClientRect().height + "px";
+
+
+                    // set the width of the iframe as the 
+                    // width of the iframe content
+                    console.log(frame.contentWindow.document.querySelector(".container").getBoundingClientRect());
+                    frame.style.width =
+                        // frame.contentWindow.document.body.scrollWidth + 'px';
+                        frame.contentWindow.document.querySelector(".container").getBoundingClientRect().width + "px";
+                    // Hiding the window on clicking on ok button inside the iframe
+                    frame.contentWindow.document.querySelector(".ok").addEventListener("click", event => {
+                        document.body.removeChild(window);
+                        Taskbar.removeItem(window);
+                    })
+
+                }
+            windowBody.appendChild(iframe);
+            window.appendChild(windowBody);
             document.body.appendChild(window);
+            // Placing the newly opned window in the center
+            window.style.left = "30%";
+            window.style.top = "10%";
+
             // finally create the window
             // this.createWindow();
             this.makeDraggable(window);

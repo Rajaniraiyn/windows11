@@ -595,6 +595,12 @@ label[for="runInputField"] {
     background-color: #F5F5F5;
 }
 
+.windowBody {
+    min-height: 100px;
+    width: 100%;
+    /* background-color: orange; */
+}
+
 
 /* styling keyboard */
 
