@@ -565,12 +565,14 @@ label[for="runInputField"] {
 }
 
 .smallTitleIcon {
-    width: 25px;
+    width: 21px;
+    margin: 5px;
 }
 
 .windowTitle {
     font-size: 15px;
     margin-left: 5px;
+    margin-right: 100px;
 }
 
 .optionsWrapper {

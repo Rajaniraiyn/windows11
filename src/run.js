@@ -38,7 +38,9 @@ runInputField.addEventListener("keyup", event => {
 
 });
 
-let allPrograms = ["winver", "powershell", "terminal"];
+let allPrograms = ["winver", "powershell", "msedge"];
+let allProgramsTitleName = ["About Windows", "Windows PowerShell", "Microsoft Edge"];
+let allProgramIcons = ["src/icons/favicon.png", "src/icons/powershell.png", "src/icons/edge.svg"];
 
 function searchPrograms(givenProgram) {
     if (allPrograms.includes(givenProgram)) {
@@ -49,7 +51,10 @@ function searchPrograms(givenProgram) {
 }
 
 function executeProgram(programName) {
-    let win1 = new Window(programName, "black", "white", "src/icons/runicon.png");
+    let index = allPrograms.indexOf(programName);
+    let icon = allProgramIcons[index];
+    let programTitle = allProgramsTitleName[index];
+    let win1 = new Window(programTitle, "black", "white", icon);
     win1.createWindow();
 
 }

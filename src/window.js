@@ -61,12 +61,9 @@ class Window {
                 cross.classList.add("windowOptions", "windowCrosser");
                 optionsWrapper.appendChild(cross);
                 this.makeCrosserAlive(cross);
-
             }
 
             window.appendChild(windowTitleBar);
-
-
             // appending options wrapper in window title bar
             windowTitleBar.appendChild(optionsWrapper)
             document.body.appendChild(window);
