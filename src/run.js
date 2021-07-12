@@ -2,6 +2,29 @@ let runDialog = document.querySelector(".runDialog");
 let runInputField = document.getElementById("runInputField");
 // making the run dialog appear on pressing window + r
 document.body.addEventListener("keydown", event => {
+    // this will open the run dialog by pressing win +r key even in windows. WARNING: This may also pop up window's atual run dialog.
+    if (event.key == "Meta") {
+        let active = false;
+        console.log("meta key pressed")
+            // Check if key is already active
+        if (Keyboard.activeKey.indexOf("Win") == -1) {
+            Keyboard.activeKey.push("Win");
+            document.getElementById("winkey").classList.add("activeKey");
+            active = true;
+        } else {
+            console.log("Key  is already active")
+        }
+        if (active) {
+            setTimeout(() => {
+                let index = Keyboard.activeKey.indexOf("Win");
+                Keyboard.activeKey.splice(index, 1)
+                document.getElementById("winkey").classList.remove("activeKey");
+
+            }, 300)
+        }
+    }
+
+
     function shortCutWithKeyboard(key) {
         if (Keyboard.activeKey.includes("Win") && (event.key == "r" || event.key == "R")) {
             return true;
