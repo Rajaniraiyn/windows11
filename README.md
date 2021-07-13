@@ -24,8 +24,11 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [x] ~~Add Login Screen with username and photo~~
  - [x] ~~Add Action center~~
  - [x] ~~Add Run Window~~
+ - [x] ~~Add Shut down screen~~
+ - [x] ~~Add winver window~~
+ - [ ] Add Tooltips
+ - [ ] Add Credits page
  - [ ] Users can set Username, Password and Profile picture before lock screen
- - [ ] Add winver window
  - [ ] Improve Start Menu
  - [ ] Add all apps in Start
  - [ ] Add complete Search in Start
@@ -46,7 +49,8 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
 
 ## 🙏Special Thanks🙏 
 [![Shudarsan Regmi](https://user-images.githubusercontent.com/72294760/124927550-639ef500-e01c-11eb-94c0-ceda2d06cbd9.png)](https://github.com/ShudarsanRegmi)
+[![QuantumByteStudios](https://user-images.githubusercontent.com/72294760/125438563-dc0452e5-8f18-4da7-a19c-55c85811ec48.png)](https://github.com/QuantumByteStudios)
 
 ---
-Guys Thankyou for spend your precious time for this project. I am continually working on it to improve it. Anyone interested can help me out.
+Guys Thankyou for spend your precious time for this project. We are continually working on it to improve it. Anyone interested can help us out.
 ---
