@@ -27,6 +27,9 @@ document.body.addEventListener("keydown", event => {
 
     function shortCutWithKeyboard(key) {
         if (Keyboard.activeKey.includes("Win") && (event.key == "r" || event.key == "R")) {
+            Keyboard.activeKey.shift();
+            Keyboard.activeKey.pop();
+            document.querySelector("#winkey").classList.remove("activeKey");
             return true;
         } else {
             return false;
@@ -42,6 +45,10 @@ document.body.addEventListener("keydown", event => {
 runInputField.addEventListener("keyup", event => {
     if (searchPrograms(runInputField.value)) {
         document.getElementById("runOkBtn").classList.remove("disabledButton")
+        document.getElementById("runOkBtn").onclick = _ => {
+            executeProgram(searchPrograms(runInputField.value));
+            runDialog.style.display = "none";
+        }
     } else {
         document.getElementById("runOkBtn").classList.add("disabledButton")
     }
