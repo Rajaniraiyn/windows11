@@ -32,4 +32,5 @@
 
 #browser{
   display: none;
+  position: absolute;
 }
