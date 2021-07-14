@@ -1,0 +1,35 @@
+.resizableWindow{
+  width: 50%;
+  height: 50%;  
+  border: none;
+  margin: 0px;
+}
+.frameresizableWindow{
+  width: 100%;
+  height: 100%;  
+  border: none;
+  margin: 0px;
+}
+.tittleWindow{
+  background-color: whitesmoke;
+}
+/* IconShell CSS */
+.Iconshell{
+  background-color: transparent;
+  width: 80px;
+  height: 80px;
+  border: solid 0px white;
+  align-items: center;
+  padding: 0px;
+}
+
+.Iconshell:hover{
+  background-color: transparent;
+}
+
+
+/* ID CSS FOR JS */
+
+#browser{
+  display: none;
+}

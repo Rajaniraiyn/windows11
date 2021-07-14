@@ -40,6 +40,16 @@
             background-color: white;
         }
     </style>
+
+    <!--Some CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="src/webapps.css">
+    <!--Some CSS -->
+    <script src="src/ifames-apps.js"></script>
+    <link rel="stylesheet" href="src/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="src/jquery-ui.min.js"></script>
+
 </head>
 
 <body>
@@ -83,6 +93,37 @@
             <source src="src/others/bootAnimation.mp4#t=0.6" type="video/mp4">
         </video>
     </div>
+
+    <!-- Some JS for movable, dragable and resizable windows -->
+    <script>
+        $(function(){
+        $('.resizable').draggable();
+        $('.resizable').resizable({
+            handles : "n,s,w,e"
+            });
+        });
+    </script>
+    <!-- EDGE BROWSER -->
+    <div id = "browser" class="resizableWindow">
+        <div class="tittleWindow">
+            <p>Edge</p>
+        </div>
+        <iframe class="frameresizableWindow" src="https://www.bing.com/"></iframe>
+    </div>
+    <script type="text/javascript">
+        function OCBROWSER(){
+            var BROWSER = document.getElementById("browser");
+
+            if(BROWSER.style.display === "none") {
+                BROWSER.style.display = "block"
+            }
+            else {
+               BROWSER.style.display = "none"
+            }
+        }
+    </script>
+    <!-- EDGE BROWSER -->
+
     <link rel="stylesheet" href="src/style.css">
     <div class="desktop">
         <div class="desktopIcons">
@@ -98,11 +139,14 @@
             </figure>
             <!-- desktop icon 3 -->
             <figure>
-                <img src="src/icons/edge.svg" alt="Microsoft Edge Icon">
-                <figcaption class="iconName">Microsoft Edge</figcaption>
+                <button onclick = "OCBROWSER()" id = "browserbtn" class = "Iconshell" data-toggle="tooltip" data-placement="bottom" title="Browser">
+                    <img src="src/icons/edge.svg" alt="Microsoft Edge Icon">
+                    <figcaption class="iconName">Microsoft Edge</figcaption>
+                </button>
             </figure>
         </div>
     </div>
+
     <div class="start">
         <div class="search">
             <label>
@@ -202,7 +246,7 @@
                 <img src="src/icons/user.png" alt="Windows 11 User icon">
                 <span>Rajaniraiyn</span>
             </div>
-            <img src="src/icons/shutdown.png" alt="Windows 11 Shutdown icon" id="shutdown">
+            <a href="src/redirects/shutdown/logoff.html"><img src="src/icons/shutdown.png" alt="Windows 11 Shutdown icon" id="shutdown"></a>
         </div>
     </div>
     <div class="taskbar">
@@ -334,7 +378,8 @@
     <script src="src/keyboard.js"></script>
     <script src="src/taskbar.js"></script>
     <script src="src/window.js"></script>
-    <script src="src/run.js"></script>
+    <script src="src/run.js"></script> 
+
 </body>
 
 </html>
