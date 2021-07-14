@@ -16,6 +16,7 @@
     <meta property="og:image" content="/">
     <meta property="og:description" content="A simple Windows 11 experience within browser.">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
     <link rel="stylesheet" href="src/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="src/webapps.css">
     <!-- For Boot Screen -->
@@ -101,18 +102,18 @@
     <div class="desktop">
         <div class="desktopIcons">
             <!-- desktop icon 1 -->
-            <figure>
+            <figure id="deskcomp">
                 <img src="src/icons/Computer.png" alt="Windows 11 This PC icon">
                 <figcaption class="iconName">This PC</figcaption>
             </figure>
             <!-- desktop icon 2 -->
-            <figure>
+            <figure id="deskvscode">
                 <img src="src/icons/vscode.png" alt="Visual Studio Code Icon">
                 <figcaption class="iconName">Visual Studio Code</figcaption>
             </figure>
             <!-- desktop icon 3 -->
-            <figure>
-                <button onclick = "OCBROWSER()" id = "browserbtn" class = "Iconshell" data-toggle="tooltip" data-placement="bottom" title="Browser">
+            <figure id="deskbrowser">
+                <button onclick = "OCBROWSER()" id = "browserbtn" class = "Iconshell">
                     <img src="src/icons/edge.svg" alt="Microsoft Edge Icon">
                     <figcaption class="iconName">Microsoft Edge</figcaption>
                 </button>
@@ -224,14 +225,14 @@
     </div>
     <div class="taskbar">
         <div class="center">
-            <img src="src/icons/startButton.png" alt="Windows 11 start icon">
+            <img src="src/icons/startButton.png" alt="Windows 11 start icon" id="starticon">
             <img src="src/icons/search.svg" alt="Windows 11 Search icon" id="searchIcon">
-            <img src="src/icons/taskView.svg" alt="Windows 11 Task View icon">
-            <img src="src/icons/widgets.svg" alt="Windows 11 widgets">
-            <img src="src/icons/teams.svg" alt="Microsoft Teams icon">
-            <img src="src/icons/fileExplorer.png" alt="Windows 11 File Explorer icon">
-            <img src="src/icons/edge.svg" alt="Windows 11 Edge icon" onclick="OCBROWSER()">
-            <img src="src/icons/store.png" alt="Windows 11 Store icon">
+            <img src="src/icons/taskView.svg" alt="Windows 11 Task View icon" id="taskviewIcon">
+            <img src="src/icons/widgets.svg" alt="Windows 11 widgets" id="widgetsIcon">
+            <img src="src/icons/teams.svg" alt="Microsoft Teams icon" id="teamsIcon">
+            <img src="src/icons/fileExplorer.png" alt="Windows 11 File Explorer icon" id="filesIcon">
+            <img src="src/icons/edge.svg" alt="Windows 11 Edge icon" onclick="OCBROWSER()" id="edgeIcon">
+            <img src="src/icons/store.png" alt="Windows 11 Store icon" id="storeIcon">
             <img src="src/icons/keyboard.png" alt="Keyboard Meta Keys" id="keyboardOpener">
         </div>
         <div class="right">
@@ -345,6 +346,11 @@
             <h1 id="jpt">Windows 11</h1>
         </div>
     </div> -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script> 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="src/jquery-ui.min.js"></script>
+    <script src="src/iframes-apps.js"></script>
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>
     <script src="src/boot.js"></script>
@@ -352,9 +358,8 @@
     <script src="src/taskbar.js"></script>
     <script src="src/window.js"></script>
     <script src="src/run.js"></script> 
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="src/jquery-ui.min.js"></script>
-    <script src="src/iframes-apps.js"></script>
+    <script src="src/tooltip.js"></script>
+    
 
 </body>
 
