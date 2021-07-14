@@ -28,7 +28,10 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [x] ~~Add winver window~~
  - [X] ~~Add Tooltips~~
  - [ ] Add Credits page
- - [ ] Users can set Username, Password and Profile picture before lock screen
+ - [ ] Add Touch Keyboard (On Screen Keyboard)
+ - [ ] Add Store containing web apps and projects
+ - [ ] Windows 11 setup
+ - [ ] Users can set Custom preferences during setup
  - [ ] Improve Start Menu
  - [ ] Add all apps in Start
  - [ ] Add complete Search in Start
