@@ -35,3 +35,17 @@
   display: none;
   position: absolute;
 }
+
+/* *new edge from run (experimental)* */
+.window[data-id="Microsoft Edge1"] {
+  min-width: 90vw;
+  min-height: 90vh;
+}
+
+.windowBody iframe{
+  border: none;
+  min-width: 90vw !important;
+  width: 100vw !important;
+  height: calc(100vh - 71px) !important;
+  min-height: calc(90vh - 31px) !important;
+}

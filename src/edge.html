@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Edge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40px 1fr;
+        }
+
+        .top {
+            background-color: #3B3B3B;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            overflow: hidden;
+            padding: 3px;
+        }
+
+        .top img {
+            width: 20px;
+            padding: 5px 11px;
+            border-radius: 3px;
+            transition: background-color 0.4s;
+            filter: invert(1);
+        }
+
+        img[alt="Search Icon"] {
+            transform: rotateY(180deg);
+            width: 15px;
+        }
+        img[alt="User Icon"] {
+            filter: invert(0);
+        }
+        input[type="url"] {
+            background-color: transparent;
+            color: gray;
+            caret-color: #FFFFFF;
+            font-size: 15px;
+            min-width: 50vw;
+            max-width: 80vw;
+            padding: 2px;
+            border: none;
+            outline: none;
+        }
+        input[type="url"]:focus {
+            color: white;
+        }
+        label {
+            display: inline-flex;
+            padding: 3px;
+            background-color: #2B2B2B;
+            border-radius: 3px;
+        }
+        .left img:hover, .right img:hover {
+            background-color: #adadad;
+        }
+        
+        img[alt="User Icon"]:hover {
+            background-color: #515151;
+        }
+        iframe {
+            width: 100vw;
+            height: calc(100vh - 40px);
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="left">
+            <img src="icons/arrowLeft.svg" alt="Go Backward Icon" onclick="window.history.back()">
+            <img src="icons/arrowRight.svg" alt="Go Forward Icon" onabort="window.history.forward()">
+            <img src="icons/refresh.svg" alt="Refresh Icon" onclick="window.Location">
+        </div>
+        <div class="center">
+            <label>
+                <img src="icons/search.svg" alt="Search Icon">
+                <input type="url" class="url" placeholder="Search or enter web address" spellcheck="false" autofocus autocomplete="url" value="https://www.bing.com/" onkeydown="if(event.key=='Enter'){if(this.value.includes('http') == false){this.value = 'https:\/\/' + this.value}document.querySelector('iframe').src = this.value}">
+            </label>
+        </div>
+        <div class="right">
+            <img src="icons/user.svg" alt="User Icon" class="user">
+            <img src="icons/threeDots.svg" alt="Menu Icon" class="menu">
+        </div>
+    </div>
+    <div class="container">
+        <iframe src="https://www.bing.com" frameborder="0">
+            //New Tab page
+        </iframe>
+    </div>
+</body>
+
+</html>
