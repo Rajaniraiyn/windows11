@@ -26,7 +26,7 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [x] ~~Add Run Window~~
  - [x] ~~Add Shut down screen~~
  - [x] ~~Add winver window~~
- - [ ] Add Tooltips
+ - [X] Add Tooltips
  - [ ] Add Credits page
  - [ ] Users can set Username, Password and Profile picture before lock screen
  - [ ] Improve Start Menu
