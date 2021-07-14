@@ -21,6 +21,7 @@
   border: solid 0px white;
   align-items: center;
   padding: 0px;
+  cursor: pointer;
 }
 
 .Iconshell:hover{
@@ -32,4 +33,5 @@
 
 #browser{
   display: none;
+  position: absolute;
 }
