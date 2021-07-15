@@ -14,8 +14,8 @@ let Taskbar = {
         let item = document.createElement("img");
         item.id = idName;
         window.dataset.id = idName; // doing this to get the corresponding minimized window from taskbar..
-        item.src = icon;
-        // item.classList.add(clAss); //  commehting this to handle the bug of not being able to create window with space in it's title
+        item.src = icon.includes("edge") ? "" : icon;
+        // item.classList.add(clAss); //  commenting this to handle the bug of not being able to create window with space in it's title
         this.centerBox.appendChild(item);
         this.openedIcons.push(item);
         this.maximize(item);
@@ -51,3 +51,4 @@ let Taskbar = {
 }
 
 // Adding event listeners to taskbar icons
+// Don't add event listeners instead use executeProgram() to do so

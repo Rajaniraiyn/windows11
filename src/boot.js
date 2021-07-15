@@ -1,4 +1,4 @@
-// accessig required elements
+// accessing required elements
 let powerOnBox = document.querySelector(".powerOnBox");
 let powerOnBtn = document.getElementById("powerOnBtn");
 // turning off the boot process for development purpose
@@ -10,11 +10,15 @@ function skipBoot() {
     document.body.style.background = "#fff url(src/wallpaper/light.jpg) center center/cover no-repeat";
 }
 // skipBoot();
-
-powerOnBtn.addEventListener("click", event => {
-    fullScreen();
-    boot();
-})
+if (window.location.hash == "#dev") {
+    skipBoot()
+}
+else {
+    powerOnBtn.addEventListener("click", event => {
+        fullScreen();
+        boot();
+    })
+}
 
 function boot() {
     // Boot the os after the power button has been clicked

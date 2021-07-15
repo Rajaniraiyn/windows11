@@ -1,9 +1,9 @@
-var normalizePosition = (mouseX, mouseY, scope, contextMenu) => {
+let normalizePosition = (mouseX, mouseY, parent, children) => {
     // ? compute what is the mouse position relative to the container element (scope)
     var {
         left: scopeOffsetX,
         top: scopeOffsetY,
-    } = scope.getBoundingClientRect();
+    } = parent.getBoundingClientRect();
 
     scopeOffsetX = scopeOffsetX < 0 ? 0 : scopeOffsetX;
     scopeOffsetY = scopeOffsetY < 0 ? 0 : scopeOffsetY;
@@ -13,10 +13,10 @@ var normalizePosition = (mouseX, mouseY, scope, contextMenu) => {
 
     // ? check if the element will go out of bounds
     var outOfBoundsOnX =
-        scopeX + contextMenu.clientWidth > scope.clientWidth;
+        scopeX + children.clientWidth > parent.clientWidth;
 
     var outOfBoundsOnY =
-        scopeY + contextMenu.clientHeight > scope.clientHeight;
+        scopeY + children.clientHeight > parent.clientHeight;
 
     var normalizedX = mouseX;
     var normalizedY = mouseY;
@@ -24,13 +24,13 @@ var normalizePosition = (mouseX, mouseY, scope, contextMenu) => {
     // ? normalize on X
     if (outOfBoundsOnX) {
         normalizedX =
-            scopeOffsetX + scope.clientWidth - contextMenu.clientWidth;
+            scopeOffsetX + parent.clientWidth - children.clientWidth;
     }
 
     // ? normalize on Y
     if (outOfBoundsOnY) {
         normalizedY =
-            scopeOffsetY + scope.clientHeight - contextMenu.clientHeight;
+            scopeOffsetY + parent.clientHeight - children.clientHeight;
     }
 
     return { normalizedX, normalizedY };

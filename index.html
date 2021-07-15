@@ -17,7 +17,7 @@
     <meta property="og:description" content="A simple Windows 11 experience within browser.">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css">
-    <link rel="stylesheet" href="src/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="src/jquery-ui.min.css"> -->
     <link rel="stylesheet" type="text/css" href="src/webapps.css">
     <!-- For Boot Screen -->
     <style>
@@ -90,12 +90,14 @@
     </div>
 
     <!-- EDGE BROWSER -->
+    <!--
     <div id = "browser" class="resizableWindow resizable">
         <div class="tittleWindow">
             <p>Edge</p>
         </div>
         <iframe class="frameresizableWindow" src="https://www.bing.com/"></iframe>
     </div>
+    -->
     <!-- EDGE BROWSER -->
 
     <link rel="stylesheet" href="src/style.css">
@@ -107,16 +109,16 @@
                 <figcaption class="iconName">This PC</figcaption>
             </figure>
             <!-- desktop icon 2 -->
-            <figure id="deskvscode">
+            <figure id="deskvscode" onclick="executeProgram('vscode')">
                 <img src="src/icons/vscode.png" alt="Visual Studio Code Icon">
                 <figcaption class="iconName">Visual Studio Code</figcaption>
             </figure>
             <!-- desktop icon 3 -->
-            <figure id="deskbrowser">
-                <button onclick = "OCBROWSER()" id = "browserbtn" class = "Iconshell">
+            <figure id="deskbrowser" onclick="executeProgram('msedge')">
+           <!-- <button onclick = "OCBROWSER()" id = "browserbtn" class = "Iconshell"> -->
                     <img src="src/icons/edge.svg" alt="Microsoft Edge Icon">
                     <figcaption class="iconName">Microsoft Edge</figcaption>
-                </button>
+           <!-- </button> -->
             </figure>
         </div>
     </div>
@@ -135,7 +137,7 @@
             </div>
             <div class="start-icons">
                 <figure>
-                    <img src="src/icons/edge.svg" alt="Windows 11 Edge icon" onclick="OCBROWSER()">
+                    <img src="src/icons/edge.svg" alt="Windows 11 Edge icon" onclick="executeProgram('msedge')">
                     <figcaption>Edge</figcaption>
                 </figure>
                 <figure>
@@ -151,11 +153,11 @@
                     <figcaption>PowerPoint</figcaption>
                 </figure>
                 <figure>
-                    <img src="src/icons/mail.png" alt="Windows Mail icon">
+                    <img src="src/icons/mail.svg" alt="Windows Mail icon">
                     <figcaption>Mail</figcaption>
                 </figure>
                 <figure>
-                    <img src="src/icons/calender.png" alt="Windows Calender icon">
+                    <img src="src/icons/calender.svg" alt="Windows Calender icon">
                     <figcaption>Calender</figcaption>
                 </figure>
                 <figure>
@@ -171,7 +173,7 @@
                     <figcaption>OneNote</figcaption>
                 </figure>
                 <figure>
-                    <img src="src/icons/yourPhone.png" alt="Windows Your Phone icon">
+                    <img src="src/icons/yourPhone.svg" alt="Windows Your Phone icon">
                     <figcaption>Your Phone</figcaption>
                 </figure>
                 <figure>
@@ -187,7 +189,7 @@
                     <figcaption>Settings</figcaption>
                 </figure>
                 <figure>
-                    <img src="src/icons/calculator.png" alt="Windows Calculator icon">
+                    <img src="src/icons/calculator.svg" alt="Windows Calculator icon">
                     <figcaption>Calculator</figcaption>
                 </figure>
                 <figure>
@@ -199,11 +201,11 @@
                     <figcaption>Snipping Tool</figcaption>
                 </figure>
                 <figure>
-                    <img src="src/icons/movies.png" alt="Windows Movies & TV icon">
+                    <img src="src/icons/movies.svg" alt="Windows Movies & TV icon">
                     <figcaption>Movies & TV</figcaption>
                 </figure>
                 <figure>
-                    <img src="src/icons/clock.png" alt="Windows Clock icon">
+                    <img src="src/icons/clock.svg" alt="Windows Clock icon">
                     <figcaption>Clock</figcaption>
                 </figure>
             </div>
@@ -231,12 +233,12 @@
             <img src="src/icons/widgets.svg" alt="Windows 11 widgets" id="widgetsIcon">
             <img src="src/icons/teams.svg" alt="Microsoft Teams icon" id="teamsIcon">
             <img src="src/icons/fileExplorer.png" alt="Windows 11 File Explorer icon" id="filesIcon">
-            <img src="src/icons/edge.svg" alt="Windows 11 Edge icon" onclick="OCBROWSER()" id="edgeIcon">
+            <img src="src/icons/edge.svg" alt="Windows 11 Edge icon" onclick="executeProgram('msedge')" id="edgeIcon">
             <img src="src/icons/store.png" alt="Windows 11 Store icon" id="storeIcon">
-            <img src="src/icons/keyboard.png" alt="Keyboard Meta Keys" id="keyboardOpener">
         </div>
         <div class="right">
             <img src="src/icons/up.svg" alt="Up arrow">
+            <img src="src/icons/keyboard.svg" alt="Keyboard Meta Keys" id="keyboardOpener">
             <div class="action-center-button">
                 <img src="src/icons/wifi.svg" alt="WiFi" id="wifi">
                 <img src="src/icons/speaker.svg" alt="Speaker">
@@ -335,22 +337,28 @@
     </div>
     <div class="brightness-overlay"></div>
     <div id="keyboard">
-        <div class="keys" id="keyboardHider"><img src="src/icons/right.svg" alt="Hide the keyboard"></div>
-        <div class="keys" data-value="Win" id="winkey"><img src="src/icons/winkey.svg" alt=""></div>
+        <div class="keys" id="keyboardHider">
+            <img src="src/icons/right.svg" alt="Hide the keyboard" style="transform: rotate(90deg);">
+        </div>
+        <div class="keys" data-value="Win" id="winkey">
+            <img src="src/icons/winkey.svg" alt="" style="filter: invert(1);width: 70%;">
+        </div>
         <div class="keys" data-value="Alt" id="altKey">Alt</div>
         <div class="keys" data-value="Ctrl" id="ctrlKey">Ctrl</div>
     </div>
-    <!-- winver window defination -->
-    <!-- <div class="winverWindowDefination">
+    <!-- winver window definition -->
+    <!-- <div class="winverWindowDefinition">
         <div>
             <h1 id="jpt">Windows 11</h1>
         </div>
     </div> -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script> 
+    <!--
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="src/jquery-ui.min.js"></script>
     <script src="src/iframes-apps.js"></script>
+    -->
     <script src="src/start.js"></script>
     <script src="src/contextMenu.js"></script>
     <script src="src/boot.js"></script>

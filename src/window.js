@@ -29,7 +29,7 @@ class Window {
             windowName.classList.add("windowTitle");
             // appending window name in window title bar
             windowTitleBar.appendChild(windowName);
-            // creating window optiosn i.e min,max,cross
+            // creating window options i.e min,max,cross
             // creating a optionsWrapper 
             let optionsWrapper = document.createElement("div");
             optionsWrapper.classList.add("optionsWrapper");
@@ -101,7 +101,7 @@ class Window {
             windowBody.appendChild(iframe);
             window.appendChild(windowBody);
             document.body.appendChild(window);
-            // Placing the newly opned window in the center
+            // Placing the newly opened window in the center
             window.style.left = "30%";
             window.style.top = "10%";
 
@@ -116,7 +116,7 @@ class Window {
     makeDraggable(item) {
         let el = item;
         console.log(el);
-        el.addEventListener("mousedown", mousedown)
+        el.querySelector(".windowTitleBar").addEventListener("mousedown", mousedown)
 
         function mousedown(e) {
             // console.log("mouse down")
@@ -130,8 +130,8 @@ class Window {
                 let newX = prevX - e.clientX;
                 let newY = prevY - e.clientY;
                 const rect = el.getBoundingClientRect();
-                el.style.left = rect.left - newX + "px";
-                el.style.top = rect.top - newY + "px";
+                el.style.left = `${rect.left - newX}px`;
+                el.style.top = `${rect.top - newY}px`;
                 prevX = e.clientX;
                 prevY = e.clientY;
             }
@@ -142,8 +142,8 @@ class Window {
             }
         }
     }
-    makeCrosserAlive(windowCrooser) {
-        windowCrooser.addEventListener("click", event => {
+    makeCrosserAlive(windowCrosser) {
+        windowCrosser.addEventListener("click", event => {
             let windows = event.target.parentNode.parentNode.parentNode;
             if (windows.classList.contains("window")) {
                 // windows.style.display = "none";

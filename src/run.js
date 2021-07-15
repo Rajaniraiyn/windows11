@@ -68,14 +68,16 @@ runInputField.addEventListener("keyup", event => {
 
 });
 
-let allPrograms = ["winver", "powershell", "msedge"];
-let allProgramsTitleName = ["About Windows", "Windows PowerShell", "Microsoft Edge"];
-let allProgramsBody = ["src/winver.html", "src/powershell.html", "src/edge.html"]
-let allProgramIcons = ["src/icons/favicon.png", "src/icons/powershell.png", "src/icons/edge.svg"];
+let allPrograms = ["winver", "powershell", "msedge", "vscode"];
+let allProgramsTitleName = ["About Windows", "Windows PowerShell", "Microsoft Edge", "Visual Studio Code"];
+let allProgramsBody = ["src/apps/winver.html", "src/apps/powershell.html", "src/apps/edge.html", "src/apps/vscode.html"]
+let allProgramIcons = ["src/icons/favicon.png", "src/icons/powershell.png", "src/icons/edge.svg", "src/icons/vscode.svg"];
+let allSchemes = ["min", "max", "cross"];
 let allProgramsIconsSchemes = [
     ["cross"],
-    ["min", "max", "cross"],
-    ["min", "max", "cross"]
+    allSchemes,
+    allSchemes,
+    allSchemes
 ];
 
 function searchPrograms(givenProgram) {

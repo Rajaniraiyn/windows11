@@ -10,7 +10,7 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             overflow: hidden;
         }
 
@@ -41,9 +41,11 @@
             transform: rotateY(180deg);
             width: 15px;
         }
+
         img[alt="User Icon"] {
             filter: invert(0);
         }
+
         input[type="url"] {
             background-color: transparent;
             color: gray;
@@ -55,26 +57,33 @@
             border: none;
             outline: none;
         }
+
         input[type="url"]:focus {
             color: white;
         }
+
         label {
             display: inline-flex;
             padding: 3px;
             background-color: #2B2B2B;
             border-radius: 3px;
         }
-        .left img:hover, .right img:hover {
+
+        .left img:hover,
+        .right img:hover {
             background-color: #adadad;
         }
-        
+
         img[alt="User Icon"]:hover {
             background-color: #515151;
         }
+
         iframe {
             width: 100vw;
             height: calc(100vh - 40px);
-            overflow: scroll;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            background-color: #3B3B3B;
         }
     </style>
 </head>
@@ -82,25 +91,46 @@
 <body>
     <div class="top">
         <div class="left">
-            <img src="icons/arrowLeft.svg" alt="Go Backward Icon" onclick="window.history.back()">
-            <img src="icons/arrowRight.svg" alt="Go Forward Icon" onabort="window.history.forward()">
-            <img src="icons/refresh.svg" alt="Refresh Icon" onclick="window.Location">
+            <img src="../icons/arrowLeft.svg" alt="Go Backward Icon" onclick="window.history.back()">
+            <img src="../icons/arrowRight.svg" alt="Go Forward Icon" onabort="window.history.forward()">
+            <img src="../icons/refresh.svg" alt="Refresh Icon" onclick="window.location.reload()">
         </div>
         <div class="center">
             <label>
-                <img src="icons/search.svg" alt="Search Icon">
-                <input type="url" class="url" placeholder="Search or enter web address" spellcheck="false" autofocus autocomplete="url" value="https://www.bing.com/" onkeydown="if(event.key=='Enter'){if(this.value.includes('http') == false){this.value = 'https:\/\/' + this.value}document.querySelector('iframe').src = this.value}">
+                <img src="../icons/search.svg" alt="Search Icon">
+                <input type="url" class="url" placeholder="Search or enter web address" autofocus spellcheck="false"
+                    autocomplete="url" value="" onkeydown="if(event.key == 'Enter')loadURL(this.value)">
             </label>
         </div>
         <div class="right">
-            <img src="icons/user.svg" alt="User Icon" class="user">
-            <img src="icons/threeDots.svg" alt="Menu Icon" class="menu">
+            <img src="../icons/user.svg" alt="User Icon" class="user">
+            <img src="../icons/threeDots.svg" alt="Menu Icon" class="menu">
         </div>
     </div>
     <div class="container">
-        <iframe src="https://www.bing.com" frameborder="0">
-            //New Tab page
-        </iframe>
+        <script>
+            function loadURL(url) {
+                if (url.includes("https://") == false) url = "https://" + url;
+                if (isValidURL(url)) {
+                    if (url.includes("google.com")) {
+                        if (url.includes("google.com/search/?")) url += "&igu=1";
+                        else url = "https://www.google.com/search?igu=1"
+                    }
+                }
+                else if (url == "https://") url = "";
+                else url = url.replace("https://", "https://www.bing.com/search/?q=")
+                window.location.href = window.location.pathname + "#" + url;
+                window.location.reload()
+            }
+            function isValidURL(string) {
+                var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+                return (res !== null)
+            };
+        </script>
+        <iframe src="" frameborder="0"></iframe>
+        <script>
+            document.querySelector("iframe").src = document.querySelector("input").value = window.location.hash.replace("#", "")
+        </script>
     </div>
 </body>
 

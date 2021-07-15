@@ -1,3 +1,4 @@
+/* sorry QuantumByteStudios this loads lots of resources
 .resizableWindow{
   width: 50%;
   height: 50%;  
@@ -14,6 +15,7 @@
   background-color: whitesmoke;
 }
 /* IconShell CSS */
+/*
 .Iconshell{
   background-color: transparent;
   width: 80px;
@@ -31,6 +33,7 @@
 
 /* ID CSS FOR JS */
 
+/*
 #browser{
   display: none;
   position: absolute;
