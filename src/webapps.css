@@ -40,12 +40,17 @@
 .window[data-id="Microsoft Edge1"] {
   min-width: 90vw;
   min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30px 1fr;
 }
-
-.windowBody iframe{
+.window[data-id="Microsoft Edge1"] .windowBody {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.window[data-id="Microsoft Edge1"] .windowBody iframe{
   border: none;
-  min-width: 90vw !important;
-  width: 100vw !important;
-  height: calc(100vh - 71px) !important;
-  min-height: calc(90vh - 31px) !important;
+  height: 100% !important;
+  width: 100% !important;
 }
