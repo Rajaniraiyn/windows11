@@ -7,7 +7,9 @@
 Windows 11 within browser. This is not just a image but real elements which are completely Inspired from Windows 11 design to give people who really love windows 11.
 
 ## Demo
-Windows 11 live @ https://rajaniraiyn.github.io/windows11
+<h1>Windows 11 live @ https://rajaniraiyn.github.io/windows11 😉🔥<br></h1>
+
+<img width="300px" height="300px" src="https://847395.smushcdn.com/2245437/wp-content/uploads/2021/07/Menu-de-Inicio-Windows-11.gif?lossy=1&strip=1&webp=1"><img width="500px" height="300px" src="https://weblium.com/blog/wp-content/uploads/2020/06/windows-800x437.png">
 
 https://user-images.githubusercontent.com/72294760/125172830-8296b600-e1d9-11eb-8be9-c60ffecce151.mp4
 
@@ -28,7 +30,10 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [x] ~~Add winver window~~
  - [X] ~~Add Tooltips~~
  - [ ] Add Credits page
- - [ ] Users can set Username, Password and Profile picture before lock screen
+ - [ ] Add Touch Keyboard (On Screen Keyboard)
+ - [ ] Add Store containing web apps and projects
+ - [ ] Windows 11 setup
+ - [ ] Users can set Custom preferences during setup
  - [ ] Improve Start Menu
  - [ ] Add all apps in Start
  - [ ] Add complete Search in Start
@@ -50,7 +55,10 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
 ## 🙏Special Thanks🙏 
 [![Shudarsan Regmi](https://user-images.githubusercontent.com/72294760/124927550-639ef500-e01c-11eb-94c0-ceda2d06cbd9.png)](https://github.com/ShudarsanRegmi)
 [![QuantumByteStudios](https://user-images.githubusercontent.com/72294760/125438563-dc0452e5-8f18-4da7-a19c-55c85811ec48.png)](https://github.com/QuantumByteStudios)
+[![Kush Agarwal](https://user-images.githubusercontent.com/72294760/125594273-78ed0f2f-3301-4a1a-acac-b68be1a359d7.png)](https://github.com/Kushhhh-sh)
 
 ---
 Guys Thankyou for spend your precious time for this project. We are continually working on it to improve it. Anyone interested can help us out.
 ---
+
+
