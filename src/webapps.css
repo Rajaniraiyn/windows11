@@ -41,8 +41,8 @@
 
 /* *new edge from run (experimental)* */
 .window[data-id="Microsoft Edge1"] {
-  min-width: 90vw;
-  min-height: 90vh;
+  min-width: 70vw;
+  min-height: 70vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 30px 1fr;
