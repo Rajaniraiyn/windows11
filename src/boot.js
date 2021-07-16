@@ -9,14 +9,6 @@ function skipBoot() {
     document.querySelector(".start").style.display = "block";
     document.body.style.background = "#fff url(src/wallpaper/light.jpg) center center/cover no-repeat";
 }
-<<<<<<< HEAD
-skipBoot();
-
-powerOnBtn.addEventListener("click", event => {
-    fullScreen();
-    boot();
-})
-=======
 // skipBoot();
 if (window.location.hash == "#dev") {
     skipBoot()
@@ -27,7 +19,6 @@ else {
         boot();
     })
 }
->>>>>>> c71be095647cc12ec91e84e7c9c84041f9437e81
 
 function boot() {
     // Boot the os after the power button has been clicked
