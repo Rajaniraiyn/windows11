@@ -9,14 +9,14 @@ let Keyboard = {
 let keyboardToggle = 0; // toggling keyboard when clicking the keyboard icon on taskbar twice
 keyboardOpener.addEventListener("click", event => {
     if (keyboardToggle % 2 == 0) {
-        keyboard.style.transform = "translateX(0px)";
+        keyboard.style.transform = "translateY(0px)";
     } else {
-        keyboard.style.transform = "translateX(62px)";
+        keyboard.style.transform = "translateY(120px)";
     }
     keyboardToggle++;
 })
 keyboardHider.addEventListener("click", event => {
-    keyboard.style.transform = "translateX(62px)";
+    keyboard.style.transform = "translateY(120px)";
 })
 
 Array.from(keys).forEach(item => {

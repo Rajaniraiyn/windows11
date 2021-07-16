@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     user-select: none;
 }
 
@@ -269,7 +269,7 @@ figure {
 }
 
 .right img {
-    width: 15px;
+    width: 20px;
     padding: 5px;
 }
 
@@ -606,12 +606,14 @@ label[for="runInputField"] {
 
 #keyboard {
     position: absolute;
-    top: 27%;
-    right: 0;
+    bottom: 50px;
+    right: 10px;
+    border-radius: 5px;
     background-color: #333231;
     padding: 5px;
-    transform: translateX(62px);
+    transform: translateY(120px);
     transition: 0.5s;
+    display: flex;
 }
 
 .keys {
@@ -642,4 +644,8 @@ label[for="runInputField"] {
 
 .activeKey {
     background-color: darkseagreen;
+}
+
+iframe {
+    border: none;
 }
