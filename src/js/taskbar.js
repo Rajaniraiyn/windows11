@@ -37,7 +37,7 @@ let Taskbar = {
             let windows = document.getElementsByClassName("window");
             Array.from(windows).some(item => {
                 if (item.dataset.id == targetId) {
-                    item.style.display = "block";
+                    item.style.display = "grid";
                     return true;
                 } else {
                     return false;

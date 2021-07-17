@@ -10,7 +10,7 @@
         * {
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: sans-serif;
             overflow: hidden;
         }
 
@@ -69,6 +69,10 @@
             border-radius: 3px;
         }
 
+        label.focus {
+            border: #63ADE5 solid 2px;
+        }
+
         .left img:hover,
         .right img:hover {
             background-color: #adadad;
@@ -99,7 +103,9 @@
             <label>
                 <img src="../icons/search.svg" alt="Search Icon">
                 <input type="url" class="url" placeholder="Search or enter web address" autofocus spellcheck="false"
-                    autocomplete="url" value="" onkeydown="if(event.key == 'Enter')loadURL(this.value)">
+                    autocomplete="url" value="" onkeydown="if(event.key == 'Enter')loadURL(this.value)"
+                    onfocus="document.querySelector('label').classList.add('focus')"
+                    onblur="document.querySelector('label').classList.remove('focus')">
             </label>
         </div>
         <div class="right">
@@ -110,7 +116,9 @@
     <div class="container">
         <script>
             function loadURL(url) {
-                if (url.includes("https://") == false) url = "https://" + url;
+                if (url.includes("https://") == false) {
+                    url.includes("http://") ? url.replace("http://", "https://") : url = "https://" + url;
+                }
                 if (isValidURL(url)) {
                     if (url.includes("google.com")) {
                         if (url.includes("google.com/search/?")) url += "&igu=1";
@@ -127,9 +135,9 @@
                 return (res !== null)
             };
         </script>
-        <iframe src="" frameborder="0"></iframe>
+        <iframe src="" frameborder="0" target="_self"></iframe>
         <script>
-            document.querySelector("iframe").src = document.querySelector("input").value = window.location.hash.replace("#", "")
+            document.querySelector("iframe").src = document.querySelector("input").value = window.location.hash.replace("#", "");
         </script>
     </div>
 </body>
