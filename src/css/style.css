@@ -261,7 +261,7 @@ figure {
     opacity: 0.7;
     bottom: 0;
     width: 50px;
-    background: url(icons/search.svg) no-repeat;
+    background: url(../icons/search.svg) no-repeat;
 }
 
 .search input {
@@ -372,7 +372,7 @@ figure {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: #fff url("wallpaper/lockscreen.jpg") center center/cover no-repeat;
+    background: #fff url("../wallpaper/lockscreen.jpg") center center/cover no-repeat;
     position: relative;
     display: none;
 }
@@ -462,10 +462,10 @@ figure {
     background: rgba(255, 255, 255, .596);
     backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(20.5px);
-    transition: .2s border ease;
+    /*transition: .2s border ease;*/
     border-radius: 6px;
     box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 2%), 0 6.7px 5.3px rgb(0 0 0 / 3%), 0 12.5px 10px rgb(0 0 0 / 4%), 0 22.3px 17.9px rgb(0 0 0 / 4%), 0 41.8px 33.4px rgb(0 0 0 / 5%), 0 100px 80px rgb(0 0 0 / 7%);
-    animation: .3s _Pop_ufurh_1 ease;
+    /*animation: .3s _Pop_ufurh_1 ease;*/
 }
 
 .runDialog {
