@@ -119,7 +119,7 @@
                 if (url.includes("https://") == false) {
                     url.includes("http://") ? url.replace("http://", "https://") : url = "https://" + url;
                 }
-                if (isValidURL(url)) {
+                if (is_url(url)) {
                     if (url.includes("google.com")) {
                         if (url.includes("google.com/search/?")) url += "&igu=1";
                         else url = "https://www.google.com/search?igu=1"
@@ -130,14 +130,19 @@
                 window.location.href = window.location.pathname + "#" + url;
                 window.location.reload()
             }
-            function isValidURL(string) {
-                var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
-                return (res !== null)
-            };
+            function is_url(str) {
+                regexp = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/;
+                if (regexp.test(str)) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
         </script>
         <iframe src="" frameborder="0" target="_self"></iframe>
         <script>
-            document.querySelector("iframe").src = document.querySelector("input").value = window.location.hash.replace("#", "");
+            document.querySelector("iframe").src = document.querySelector("input").value = is_url(window.location.hash.replace("#", "")) ? window.location.hash.replace("#", "") : "";
         </script>
     </div>
 </body>
