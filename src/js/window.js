@@ -80,6 +80,9 @@ class Window {
                 {
                     // set the height of the iframe as 
                     // the height of the iframe content
+                    // console.clear();
+                    console.log(frame.contentWindow.document.querySelector(".container"));
+
                     frame.style.height =
                         // frame.contentWindow.document.body.scrollHeight + 'px';
                         frame.contentWindow.document.querySelector(".container").getBoundingClientRect().height + "px";
@@ -92,10 +95,12 @@ class Window {
                         // frame.contentWindow.document.body.scrollWidth + 'px';
                         frame.contentWindow.document.querySelector(".container").getBoundingClientRect().width + "px";
                     // Hiding the window on clicking on ok button inside the iframe
-                    frame.contentWindow.document.querySelector(".ok").addEventListener("click", event => {
-                        document.body.removeChild(window);
-                        Taskbar.removeItem(window);
-                    })
+                    if (frame.contentWindow.document.title == "winver") {
+                        frame.contentWindow.document.querySelector(".ok").addEventListener("click", event => {
+                            document.body.removeChild(window);
+                            Taskbar.removeItem(window);
+                        })
+                    }
 
                 }
             windowBody.appendChild(iframe);

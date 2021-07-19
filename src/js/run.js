@@ -96,6 +96,7 @@ function executeProgram(programName) {
     let options = allProgramsIconsSchemes[index];
     let win1 = new Window(programTitle, "black", "white", icon, programBody, options);
     win1.createWindow();
+    console.log(win1)
 
 }
 let windowCrossers = document.getElementsByClassName("windowCrosser");
