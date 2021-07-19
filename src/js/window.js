@@ -107,7 +107,7 @@ class Window {
             window.appendChild(windowBody);
             document.body.appendChild(window);
             // Placing the newly opened window in the center
-            window.style.left = "30%";
+            window.style.left = "20%"; //precise for other apps too
             window.style.top = "10%";
 
             // finally create the window

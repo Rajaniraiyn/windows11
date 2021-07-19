@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows PowerShell Beta</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            min-width: 50vw;
+            min-height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function execute(prog) {
+            window.parent.postMessage(prog, '*')
+        }
+        $('body').terminal({
+            echo: function (what) {
+                this.echo(what);
+            },
+            whoami: function () {
+                this.echo("Windows 11 Web");
+            },
+            winver: function () {
+                execute("winver");
+            },
+            msedge: function () {
+                execute("msedge");
+            },
+            vscode: function () {
+                execute("vscode");
+            },
+            powershell: function () {
+                execute("powershell");
+            },
+            close: function () {
+                this.echo("Please close using cross in title bar.");
+            }
+        }, {
+            greetings: 'Windows PowerShell \nCopyright (C) Microsoft Corporation. All rights reserved.\n\nTry the new cross-platform PowerShell https://aka.ms/pscore6\n',
+            prompt: "PS C:\\Users\\userName> "
+        });
+        document.body.style = "--background: #012456 !important;--color: #EEEDF0 !important; --link-color: #EEEDF0 !important"
+    </script>
+</body>
+
+</html>

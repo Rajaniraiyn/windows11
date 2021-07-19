@@ -68,13 +68,15 @@ runInputField.addEventListener("keyup", event => {
 
 });
 
-let allPrograms = ["winver", "powershell", "msedge", "vscode"];
-let allProgramsTitleName = ["About Windows", "Windows PowerShell", "Microsoft Edge", "Visual Studio Code"];
-let allProgramsBody = ["src/apps/winver.html", "src/apps/powershell.html", "src/apps/edge.html", "src/apps/vscode.html"]
-let allProgramIcons = ["src/icons/favicon.png", "src/icons/powershell.png", "src/icons/edge.svg", "src/icons/vscode.svg"];
+// added temporary Beta PowerShell
+let allPrograms = ["winver", "powershell", "msedge", "vscode", "ps"];
+let allProgramsTitleName = ["About Windows", "Windows PowerShell", "Microsoft Edge", "Visual Studio Code", "Windows PowerShell Beta"];
+let allProgramsBody = ["src/apps/winver.html", "src/apps/powershell.html", "src/apps/edge.html", "src/apps/vscode.html", "src/apps/powershellBeta.html"]
+let allProgramIcons = ["src/icons/favicon.png", "src/icons/powershell.png", "src/icons/edge.svg", "src/icons/vscode.svg", "src/icons/powershell.png"];
 let allSchemes = ["min", "max", "cross"];
 let allProgramsIconsSchemes = [
     ["cross"],
+    allSchemes,
     allSchemes,
     allSchemes,
     allSchemes
@@ -111,3 +113,8 @@ Array.from(windowCrossers).forEach(item => {
         }
     })
 })
+
+// get commands from iframe
+window.addEventListener('message', e => {
+    executeProgram(e.data)
+});
