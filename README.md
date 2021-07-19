@@ -50,7 +50,8 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [ ] Improved Widgets with fullscreen support
  - [ ] Improved lock screen
  - [ ] Add Chat(Teams) app
- - [ ] Add Black Screen of Death (BSOD)
+ - [X] ~~Add Black Screen of Death (BSOD)~~
+ - [X] ~~Add Blue Screen of Death (BSOD)~~
 
 ## 🙏Special Thanks🙏 
 [![Shudarsan Regmi](https://user-images.githubusercontent.com/72294760/124927550-639ef500-e01c-11eb-94c0-ceda2d06cbd9.png)](https://github.com/ShudarsanRegmi)

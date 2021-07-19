@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Powershellr</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 15px;
+            user-select: none;
+            -webkit-user-drag: none;
+            overflow: hidden;
+        }
+        
+        .container {
+            background-color: #F0F0F0;
+            /* padding: 20px; */
+            width: 760px;
+            height: 590px;
+            position: relative;
+        }
+        
+        .innerContainer {
+            height: 100%;
+            width: 100%;
+            background-color: #012556;
+            color: #fff;
+            /* border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px; */
+        }
+        
+        .outputArea {
+            width: 100%;
+            padding: 5px;
+            /* background-color: orange; */
+        }
+        
+        .inputArea {
+            width: 100%;
+            padding: 5px;
+            /* background-color: yellow; */
+        }
+        
+        .inputArea>input {
+            margin-left: 5px;
+            padding: 5px;
+            width: 80%;
+            background-color: #012556;
+            color: #fff;
+            border: none;
+            outline: none;
+        }
+        
+        .outputBox {
+            width: 100%;
+            padding: 5px;
+            /* background-color: yellow; */
+            /* border: 1px solid black; */
+        }
+        
+        .outputBoxCon {
+            width: 100%;
+            padding: 5px;
+            /* background-color: lightblue; */
+            /* border: 1px solid black; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="innerContainer">
+            <div id="outputBoxCon"></div>
+            <div class="commandCon">
+                <div class="inputArea">
+                    <label for="comamndBox">C:// ></label><input type="text" id="commandField" autocomplete="off">
+                </div>
+                <!-- <div class="outputArea">
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <script>
+        let outputField = document.querySelector(".outputArea");
+        let innerContainer = document.querySelector(".innerContainer");
+        let outputBoxCon = document.getElementById("outputBoxCon");
+        // making the input field focused whereever clicked in the document
+        document.body.addEventListener("click", event => {
+            document.getElementById("commandField").focus();
+        })
+
+        let Commands = {
+            whoami: function() {
+                return "DesktopSthSth"
+            },
+            commands: function() {
+                return Object.keys(Commands)
+            },
+            clear: function() {
+                let outputBox = document.getElementsByClassName("outputBox");
+                Array.from(outputBox).forEach(item => {
+                    outputBoxCon.removeChild(item);
+                })
+
+            }
+        }
+        let CommandMan = {
+                fire: function(cmd) {
+                    if (this.isAvaibale(cmd)) {
+
+
+                        let outputBox = document.createElement("div");
+                        outputBox.classList.add("outputBox");
+                        let prompt = document.createElement("span");
+                        prompt.classList.add("prompt");
+                        let executedCommand = document.createElement("span");
+                        executedCommand.classList.add("executedCommand");
+                        let commandOutput = document.createElement("div");
+                        commandOutput.classList.add("commandOutput");
+
+                        // appending chids
+                        outputBox.appendChild(prompt);
+                        outputBox.appendChild(executedCommand);
+                        outputBox.appendChild(commandOutput);
+                        innerContainer.prepend(outputBoxCon);
+                        outputBoxCon.append(outputBox);
+
+                        prompt.innerText = "C:// > ";
+                        executedCommand.innerText = cmd;
+
+                        // outputField.innerText += `Commands.cmd() ` + "\n"; // error
+                        // return Commands.whoami();
+                        // Looking for better alternative to this
+                        switch (cmd) {
+                            case "whoami":
+                                commandOutput.innerText += Commands.whoami() + "\n"; // error
+                                return Commands.whoami();
+                                break;
+                            case "clear":
+                                Commands.clear() + "\n"; // error
+                                return Commands.whoami();
+                                break;
+                            case "commands":
+                                commandOutput.innerText += Commands.commands() + "\n";
+                                return Commands.commands();
+                            default:
+                                break;
+                        }
+                    } else {
+                        alert("No command found")
+                            // outputField.innerText += this.showError(cmd) + "\n";
+                            // return this.showError(cmd)
+                    }
+                },
+                showError: function(cmd) {
+                    return `${cmd}: No Command Found`
+                },
+                allCommands: function() {
+                    return Object.keys(Commands)
+                },
+                isAvaibale: function(cmd) {
+                    if (this.allCommands().includes(cmd)) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            }
+            // console.log(CommandMan.fire("whoami"));
+        let commandField = document.getElementById("commandField");
+        commandField.addEventListener("keypress", event => {
+            if (event.key == "Enter") {
+                let firedCommand = commandField.value;
+                console.log(firedCommand)
+                CommandMan.fire(firedCommand);
+                commandField.value = null;
+            }
+        })
+    </script>
+
+</body>
+
+</html>
