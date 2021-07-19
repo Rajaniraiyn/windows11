@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Powershellr</title>
+    <title>PowerShell</title>
     <style>
         * {
             margin: 0;
@@ -87,7 +87,7 @@
         let outputField = document.querySelector(".outputArea");
         let innerContainer = document.querySelector(".innerContainer");
         let outputBoxCon = document.getElementById("outputBoxCon");
-        // making the input field focused whereever clicked in the document
+        // making the input field focused wherever clicked in the document
         document.body.addEventListener("click", event => {
             document.getElementById("commandField").focus();
         })
@@ -121,7 +121,7 @@
                         let commandOutput = document.createElement("div");
                         commandOutput.classList.add("commandOutput");
 
-                        // appending chids
+                        // appending childs
                         outputBox.appendChild(prompt);
                         outputBox.appendChild(executedCommand);
                         outputBox.appendChild(commandOutput);
