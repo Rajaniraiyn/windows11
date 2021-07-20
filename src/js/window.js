@@ -135,8 +135,18 @@ class Window {
                 let newX = prevX - e.clientX;
                 let newY = prevY - e.clientY;
                 const rect = el.getBoundingClientRect();
-                el.style.left = `${rect.left - newX}px`;
-                el.style.top = `${rect.top - newY}px`;
+
+                const normalization = (x, y, elem, container) => {
+                    if (x <= 0) x = 0;
+                    if (x >= container.offsetWidth-elem.offsetWidth) x = container.offsetWidth-elem.offsetWidth;
+                    if (y <= 0) y = 0;
+                    if (y >= container.offsetHeight-elem.offsetHeight) y = container.offsetHeight-elem.offsetHeight;
+                    return {x,y};
+                };
+                
+                var normalized = normalization(rect.left-newX, rect.top-newY, el, desktop)
+                el.style.left = `${normalized.x}px`;
+                el.style.top = `${normalized.y}px`;
                 prevX = e.clientX;
                 prevY = e.clientY;
             }
