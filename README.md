@@ -11,8 +11,7 @@ Windows 11 within browser. This is not just a image but real elements which are 
 
 <img width="300px" height="300px" src="https://847395.smushcdn.com/2245437/wp-content/uploads/2021/07/Menu-de-Inicio-Windows-11.gif?lossy=1&strip=1&webp=1"><img width="500px" height="300px" src="https://weblium.com/blog/wp-content/uploads/2020/06/windows-800x437.png">
 
-https://user-images.githubusercontent.com/72294760/125172830-8296b600-e1d9-11eb-8be9-c60ffecce151.mp4
-
+https://user-images.githubusercontent.com/72294760/126310440-06eab9d5-14e9-4ffc-ad38-66c1c4466f28.mp4
 
 ## Important Note:
 I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for educative purpose only. This is an effort for people who really want to experience Windows 11.  
@@ -29,6 +28,8 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [x] ~~Add Shut down screen~~
  - [x] ~~Add winver window~~
  - [X] ~~Add Tooltips~~
+ - [X] ~~Add Black Screen of Death (BSOD)~~
+ - [X] ~~Add Blue Screen of Death (BSOD)~~
  - [ ] Add Credits page
  - [ ] Add Touch Keyboard (On Screen Keyboard)
  - [ ] Add Store containing web apps and projects
@@ -50,8 +51,6 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [ ] Improved Widgets with fullscreen support
  - [ ] Improved lock screen
  - [ ] Add Chat(Teams) app
- - [X] ~~Add Black Screen of Death (BSOD)~~
- - [X] ~~Add Blue Screen of Death (BSOD)~~
 
 ## 🙏Special Thanks🙏 
 [![Shudarsan Regmi](https://user-images.githubusercontent.com/72294760/124927550-639ef500-e01c-11eb-94c0-ceda2d06cbd9.png)](https://github.com/ShudarsanRegmi)
