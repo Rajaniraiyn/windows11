@@ -3,6 +3,7 @@
     padding: 0;
     overflow: hidden;
     font-family: sans-serif;
+    -webkit-user-select: none;
     user-select: none;
 }
 
@@ -55,7 +56,7 @@ body {
 .start-icons img {
     display: inline-block;
     width: 25px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin: 2px;
     padding: 5px;
 }
@@ -75,6 +76,7 @@ body {
 #context-menu {
     position: fixed;
     z-index: 1000;
+    width: -webkit-max-content;
     width: max-content;
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.125);
@@ -95,7 +97,7 @@ body {
 #context-menu .item {
     display: flex;
     padding: 5px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     border-radius: 5px;
 }
 
@@ -130,6 +132,7 @@ body {
     z-index: 90;
     background-color: rgb(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-radius: 7px;
     transform: translateY(660px);
@@ -222,7 +225,7 @@ figure {
     text-align: center;
     font: status-bar;
     width: 71.9px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     margin: 0px 0px 5px 0px;
     display: flex;
     flex-direction: column;
@@ -273,14 +276,6 @@ figure {
     padding: 5px;
 }
 
-
-/* unconnect this if the wifi icon at the taskbar is tilted in windows 11 */
-
-
-/* #wifi {
-    transform: rotate(30deg);
-} */
-
 .right .action-center-button {
     height: 30px;
     width: 80px;
@@ -308,7 +303,7 @@ figure {
     justify-content: center;
     align-items: center;
     font-size: smaller;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .smallRight {
