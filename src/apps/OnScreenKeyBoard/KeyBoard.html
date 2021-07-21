@@ -3,27 +3,43 @@
 
 <head>
     <title>On Screen Keyboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <style>
-        .nobtsp-container{
-            background-color: rgb(255, 128, 128);
+        .nobtsp-container {
+            background: rgb(255, 128, 128) url(../../wallpaper/TouchKeyboardThemeLight003.jpg) center center/cover no-repeat;
             padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .btn-btn-dark{
-            background-color: rgba(242, 242, 242, 0.5);
+
+        .btn-btn-dark {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
             color: black;
             font-family: sans-serif;
             margin: 5px;
             padding: 5px;
             width: 60px;
             height: 60px;
-            border-radius: 10px;
+            border-radius: 5px;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s;
         }
-        .btn-btn-dark:hover{
+
+        .btn-btn-dark:hover {
             background-color: rgba(242, 242, 242, 0.8);
             color: black;
+        }
+
+        img {
+            width: 30px;
         }
     </style>
 </head>
@@ -54,7 +70,7 @@
             <div class="btn-btn-dark">PrtSc<br>SysRq</div>
             <div class="btn-btn-dark">Scroll<br>Lock</div>
             <div class="btn-btn-dark">Pause<br>Break</div>
-        </div> 
+        </div>
 
         <div class="row">
             <div class="btn-btn-dark">~</div>
@@ -81,7 +97,7 @@
 
         <div class="row">
             <div class="btn-btn-dark">Tab</div>
-            &nbsp; 
+            &nbsp;
             <div class="btn-btn-dark">q</div>
             <div class="btn-btn-dark">w</div>
             <div class="btn-btn-dark">e</div>
@@ -107,7 +123,7 @@
 
         <div class="row">
             <div style="width: 80px;" class="btn-btn-dark">Caps</div>
-            &nbsp; 
+            &nbsp;
             <div class="btn-btn-dark">a</div>
             <div class="btn-btn-dark">s</div>
             <div class="btn-btn-dark">d</div>
@@ -131,7 +147,7 @@
 
         <div class="row">
             <div style="width: 100px;" class="btn-btn-dark">Shift</div>
-            &nbsp; 
+            &nbsp;
             <div class="btn-btn-dark">z</div>
             <div class="btn-btn-dark">x</div>
             <div class="btn-btn-dark">c</div>
@@ -139,32 +155,41 @@
             <div class="btn-btn-dark">b</div>
             <div class="btn-btn-dark">n</div>
             <div class="btn-btn-dark">m</div>
-            <div class="btn-btn-dark"><<br>,</div>
+            <div class="btn-btn-dark">
+                <<br>,
+            </div>
             <div class="btn-btn-dark">><br>.</div>
             <div class="btn-btn-dark">?<br>/</div>
             <div style="width: 110px;" class="btn-btn-dark">Shift</div>
-            <div class="btn-btn-dark"><img src="up-arrow.png"></div>
+            <div class="btn-btn-dark"><img src="../../icons/up.svg"></div>
             <div class="btn-btn-dark">.<br>Del</div>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <!-- Optional Buttons -->
             <div class="btn-btn-dark">4</div>
             <div class="btn-btn-dark">5</div>
             <div class="btn-btn-dark">6</div>
-            
+
         </div>
 
         <div class="row">
             <div class="btn-btn-dark">Ctrl</div>
-            <div class="btn-btn-dark"><img src="windows.png"></div>
+            <div class="btn-btn-dark">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style="width:30px">
+                    <path
+                        d="M20.5 6h-12A2.5 2.5 0 006 8.5v12C6 21.9 7.1 23 8.5 23h12c1.4 0 2.5-1.1 2.5-2.5v-12C23 7.1 21.9 6 20.5 6zm19 0h-12A2.5 2.5 0 0025 8.5v12c0 1.4 1.1 2.5 2.5 2.5h12c1.4 0 2.5-1.1 2.5-2.5v-12C42 7.1 40.9 6 39.5 6zm-19 19h-12A2.5 2.5 0 006 27.5v12C6 40.9 7.1 42 8.5 42h12c1.4 0 2.5-1.1 2.5-2.5v-12c0-1.4-1.1-2.5-2.5-2.5zm19 0h-12a2.5 2.5 0 00-2.5 2.5v12c0 1.4 1.1 2.5 2.5 2.5h12c1.4 0 2.5-1.1 2.5-2.5v-12c0-1.4-1.1-2.5-2.5-2.5z" />
+                </svg>
+            </div>
             <div class="btn-btn-dark">Alt</div>
             <div style="width: 365px;" class="btn-btn-dark">Space</div>
             <div class="btn-btn-dark">Alt</div>
-            <div class="btn-btn-dark"><!-- <img src="fn-key.png"> -->Fn</div>
+            <div class="btn-btn-dark">
+                <!-- <img src="fn-key.png"> -->Fn
+            </div>
             <div class="btn-btn-dark">=<br>=</div>
             <div class="btn-btn-dark">Ctrl</div>
-            <div class="btn-btn-dark"><img src="left-arrow.png"></div>
-            <div class="btn-btn-dark"><img src="down-arrow.png"></div>
-            <div class="btn-btn-dark"><img src="right-arrow.png"></div>
+            <div class="btn-btn-dark"><img src="../../icons/left.svg"></div>
+            <div class="btn-btn-dark"><img src="../../icons/down.svg"></div>
+            <div class="btn-btn-dark"><img src="../../icons/right.svg"></div>
             &nbsp; &nbsp; &nbsp; &nbsp;
             <!-- Optional Buttons -->
             <div class="btn-btn-dark">1</div>
