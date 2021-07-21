@@ -43,11 +43,12 @@
 .window[data-id="Microsoft Edge1"],
 .window[data-id="Visual Studio Code1"],
 .window[data-id="Windows PowerShell Beta1"] {
-  min-width: 70vw;
-  min-height: 70vh;
+  min-width: 50vw;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 30px 1fr;
+  resize: both;
 }
 .window[data-id="Microsoft Edge1"] .windowBody,
 .window[data-id="Visual Studio Code1"] .windowBody,

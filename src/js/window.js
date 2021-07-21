@@ -138,9 +138,9 @@ class Window {
 
                 const normalization = (x, y, elem, container) => {
                     if (x <= 0) x = 0;
-                    if (x >= container.offsetWidth-elem.offsetWidth) x = container.offsetWidth-elem.offsetWidth;
+                    if (x >= container.offsetWidth-elem.offsetWidth/2) x = container.offsetWidth-elem.offsetWidth/2;
                     if (y <= 0) y = 0;
-                    if (y >= container.offsetHeight-elem.offsetHeight) y = container.offsetHeight-elem.offsetHeight;
+                    if (y >= container.offsetHeight-elem.offsetHeight/2) y = container.offsetHeight-elem.offsetHeight/2;
                     return {x,y};
                 };
                 
@@ -192,7 +192,7 @@ class Window {
         minimizer.addEventListener("click", event => {
             let windows = event.target.parentNode.parentNode.parentNode;
             setTimeout(() => {
-                windows.style.display = "none";
+                windows.classList.add("minimized");
             }, 200)
         })
 

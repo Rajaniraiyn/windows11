@@ -37,7 +37,7 @@ let Taskbar = {
             let windows = document.getElementsByClassName("window");
             Array.from(windows).some(item => {
                 if (item.dataset.id == targetId) {
-                    item.style.display = "grid";
+                    item.classList.remove("minimized");
                     return true;
                 } else {
                     return false;

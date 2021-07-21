@@ -1,0 +1,53 @@
+@keyframes window {
+    0% {
+        transform: translateZ(700px) translateY(600px) scale(0)
+    }
+
+    to {
+        transform: translateZ(0) translateY(0) scale(1)
+    }
+}
+
+@keyframes minimize {
+    0% {
+        transform: translateZ(0) translateY(0) scale(1)
+    }
+
+    to {
+        transform: translateZ(700px) translateY(600px) scale(0)
+    }
+}
+
+@keyframes run-window {
+    0% {
+        transform: translateZ(700px) translateX(-600px) scale(0)
+    }
+
+    to {
+        transform: translateZ(0) translateX(0) scale(1)
+    }
+}
+
+.start figure,img {
+    transition: all .3s
+}
+
+.taskbar .center img:focus,.taskbar .center img:hover {
+    transform: scale(1.2)
+}
+
+.start figure:focus,.start figure:hover {
+    transform: scale(1.1)
+}
+
+.window {
+    animation: window .4s
+}
+
+.runDialog {
+    animation: run-window .4s
+}
+
+.minimized {
+    animation: minimize .4s forwards
+}
