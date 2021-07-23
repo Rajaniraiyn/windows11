@@ -8,7 +8,7 @@
     <meta name="description" content="A simple Windows 11 experience within browser.">
     <link rel="shortcut icon" href="src/icons/favicon.png" sizes="152x152">
     <link rel="apple-touch-icon" href="src/icons/favicon.png">
-    <meta name="theme-color" content="#00DBFF"/>
+    <meta name="theme-color" content="#000"/>
     <link rel="manifest" href="manifest.json" />
     <meta name="author" content="Rajaniraiyn">
     <meta name="robots" content="index, follow">
@@ -21,7 +21,7 @@
     <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js');
+            navigator.serviceWorker.register('service-worker.js');
         });
     }
     </script>

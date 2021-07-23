@@ -7,14 +7,14 @@
   "display": "fullscreen",
   "display_override": ["standalone", "minimal-ui"],
   "start_url": "/",
-  "background_color": "#00DBFF",
-  "theme_color": "#00DBFF",
+  "background_color": "#FFFFFF",
+  "theme_color": "#000",
   "description": "A simple Windows 11 experience within browser.",
   "orientation": "landscape",
   "prefer_related_applications": false,
   "icons": [
     {
-      "src": "https://rajaniraiyn.github.io/windows11/src/icons/favicon.png",
+      "src": "src/icons/favicon.png",
       "type": "image/png",
       "sizes": "426x426"
     },
@@ -22,601 +22,601 @@
       "src": "src/pwa/windows10/SmallTile.scale-100.png",
       "type": "image/png",
       "sizes": "71x71",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SmallTile.scale-125.png",
       "type": "image/png",
       "sizes": "89x89",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SmallTile.scale-150.png",
       "type": "image/png",
       "sizes": "107x107",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SmallTile.scale-200.png",
       "type": "image/png",
       "sizes": "142x142",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SmallTile.scale-400.png",
       "type": "image/png",
       "sizes": "284x284",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square150x150Logo.scale-100.png",
       "type": "image/png",
       "sizes": "150x150",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square150x150Logo.scale-125.png",
       "type": "image/png",
       "sizes": "188x188",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square150x150Logo.scale-150.png",
       "type": "image/png",
       "sizes": "225x225",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square150x150Logo.scale-200.png",
       "type": "image/png",
       "sizes": "300x300",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square150x150Logo.scale-400.png",
       "type": "image/png",
       "sizes": "600x600",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Wide310x150Logo.scale-100.png",
       "type": "image/png",
       "sizes": "310x150",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Wide310x150Logo.scale-125.png",
       "type": "image/png",
       "sizes": "388x188",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Wide310x150Logo.scale-150.png",
       "type": "image/png",
       "sizes": "465x225",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Wide310x150Logo.scale-200.png",
       "type": "image/png",
       "sizes": "620x300",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Wide310x150Logo.scale-400.png",
       "type": "image/png",
       "sizes": "1240x600",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/LargeTile.scale-100.png",
       "type": "image/png",
       "sizes": "310x310",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/LargeTile.scale-125.png",
       "type": "image/png",
       "sizes": "388x388",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/LargeTile.scale-150.png",
       "type": "image/png",
       "sizes": "465x465",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/LargeTile.scale-200.png",
       "type": "image/png",
       "sizes": "620x620",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/LargeTile.scale-400.png",
       "type": "image/png",
       "sizes": "1240x1240",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.scale-100.png",
       "type": "image/png",
       "sizes": "44x44",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.scale-125.png",
       "type": "image/png",
       "sizes": "55x55",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.scale-150.png",
       "type": "image/png",
       "sizes": "66x66",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.scale-200.png",
       "type": "image/png",
       "sizes": "88x88",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.scale-400.png",
       "type": "image/png",
       "sizes": "176x176",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/StoreLogo.scale-100.png",
       "type": "image/png",
       "sizes": "50x50",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/StoreLogo.scale-125.png",
       "type": "image/png",
       "sizes": "63x63",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/StoreLogo.scale-150.png",
       "type": "image/png",
       "sizes": "75x75",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/StoreLogo.scale-200.png",
       "type": "image/png",
       "sizes": "100x100",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/StoreLogo.scale-400.png",
       "type": "image/png",
       "sizes": "200x200",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SplashScreen.scale-100.png",
       "type": "image/png",
       "sizes": "620x300",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SplashScreen.scale-125.png",
       "type": "image/png",
       "sizes": "775x375",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SplashScreen.scale-150.png",
       "type": "image/png",
       "sizes": "930x450",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SplashScreen.scale-200.png",
       "type": "image/png",
       "sizes": "1240x600",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/SplashScreen.scale-400.png",
       "type": "image/png",
       "sizes": "2480x1200",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-16.png",
       "type": "image/png",
       "sizes": "16x16",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-20.png",
       "type": "image/png",
       "sizes": "20x20",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-24.png",
       "type": "image/png",
       "sizes": "24x24",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-30.png",
       "type": "image/png",
       "sizes": "30x30",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-32.png",
       "type": "image/png",
       "sizes": "32x32",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-36.png",
       "type": "image/png",
       "sizes": "36x36",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-40.png",
       "type": "image/png",
       "sizes": "40x40",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-44.png",
       "type": "image/png",
       "sizes": "44x44",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-48.png",
       "type": "image/png",
       "sizes": "48x48",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-60.png",
       "type": "image/png",
       "sizes": "60x60",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-64.png",
       "type": "image/png",
       "sizes": "64x64",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-72.png",
       "type": "image/png",
       "sizes": "72x72",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-80.png",
       "type": "image/png",
       "sizes": "80x80",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-96.png",
       "type": "image/png",
       "sizes": "96x96",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.targetsize-256.png",
       "type": "image/png",
       "sizes": "256x256",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-16.png",
       "type": "image/png",
       "sizes": "16x16",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-20.png",
       "type": "image/png",
       "sizes": "20x20",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-24.png",
       "type": "image/png",
       "sizes": "24x24",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-30.png",
       "type": "image/png",
       "sizes": "30x30",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-32.png",
       "type": "image/png",
       "sizes": "32x32",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-36.png",
       "type": "image/png",
       "sizes": "36x36",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-40.png",
       "type": "image/png",
       "sizes": "40x40",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-44.png",
       "type": "image/png",
       "sizes": "44x44",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-48.png",
       "type": "image/png",
       "sizes": "48x48",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-60.png",
       "type": "image/png",
       "sizes": "60x60",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-64.png",
       "type": "image/png",
       "sizes": "64x64",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-72.png",
       "type": "image/png",
       "sizes": "72x72",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-80.png",
       "type": "image/png",
       "sizes": "80x80",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-96.png",
       "type": "image/png",
       "sizes": "96x96",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-unplated_targetsize-256.png",
       "type": "image/png",
       "sizes": "256x256",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-16.png",
       "type": "image/png",
       "sizes": "16x16",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-20.png",
       "type": "image/png",
       "sizes": "20x20",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-24.png",
       "type": "image/png",
       "sizes": "24x24",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-30.png",
       "type": "image/png",
       "sizes": "30x30",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-32.png",
       "type": "image/png",
       "sizes": "32x32",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-36.png",
       "type": "image/png",
       "sizes": "36x36",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-40.png",
       "type": "image/png",
       "sizes": "40x40",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-44.png",
       "type": "image/png",
       "sizes": "44x44",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-48.png",
       "type": "image/png",
       "sizes": "48x48",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-60.png",
       "type": "image/png",
       "sizes": "60x60",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-64.png",
       "type": "image/png",
       "sizes": "64x64",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-72.png",
       "type": "image/png",
       "sizes": "72x72",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-80.png",
       "type": "image/png",
       "sizes": "80x80",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-96.png",
       "type": "image/png",
       "sizes": "96x96",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/windows10/Square44x44Logo.altform-lightunplated_targetsize-256.png",
       "type": "image/png",
       "sizes": "256x256",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/msteams/msteams-192-192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/msteams/msteams-silhouette-32-32.png",
       "type": "image/png",
       "sizes": "32x32",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/android/android-launchericon-512-512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/android/android-launchericon-192-192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/android/android-launchericon-144-144.png",
       "type": "image/png",
       "sizes": "144x144",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/android/android-launchericon-96-96.png",
       "type": "image/png",
       "sizes": "96x96",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/android/android-launchericon-72-72.png",
       "type": "image/png",
       "sizes": "72x72",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/android/android-launchericon-48-48.png",
       "type": "image/png",
       "sizes": "48x48",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/chrome/chrome-extensionmanagementpage-48-48.png",
       "type": "image/png",
       "sizes": "48x48",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/chrome/chrome-favicon-16-16.png",
       "type": "image/png",
       "sizes": "16x16",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/chrome/chrome-installprocess-128-128.png",
       "type": "image/png",
       "sizes": "128x128",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-marketplace-512-512.png",
       "type": "image/png",
       "sizes": "512x512",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-marketplace-128-128.png",
       "type": "image/png",
       "sizes": "128x128",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-256-256.png",
       "type": "image/png",
       "sizes": "256x256",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-128-128.png",
       "type": "image/png",
       "sizes": "128x128",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-90-90.png",
       "type": "image/png",
       "sizes": "90x90",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-64-64.png",
       "type": "image/png",
       "sizes": "64x64",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-48-48.png",
       "type": "image/png",
       "sizes": "48x48",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-32-32.png",
       "type": "image/png",
       "sizes": "32x32",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "src/pwa/firefox/firefox-general-16-16.png",
       "type": "image/png",
       "sizes": "16x16",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     }
   ]
 }
