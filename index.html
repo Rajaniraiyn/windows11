@@ -3,18 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Windows 11 by Rajaniraiyn</title>
     <meta name="description" content="A simple Windows 11 experience within browser.">
     <link rel="shortcut icon" href="src/icons/favicon.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="src/icons/favicon.png">
+    <meta name="theme-color" content="#00DBFF"/>
+    <link rel="manifest" href="manifest.json" />
     <meta name="author" content="Rajaniraiyn">
     <meta name="robots" content="index, follow">
     <meta name="rating" content="safe for kids">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Windows 11 by Rajaniraiyn">
-    <meta property="og:url" content="/">
+    <meta property="og:url" content="https://repository-images.githubusercontent.com/383476453/3a749fd6-31c2-41ef-99ab-3c2d8405311e">
     <meta property="og:image" content="/">
     <meta property="og:description" content="A simple Windows 11 experience within browser.">
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+    </script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
     <!-- <link rel="stylesheet" href="src/css/jquery-ui.min.css"> -->
     <!-- For Boot Screen -->
@@ -74,7 +84,7 @@
     <!-- Boot Elements -->
     <div class="boot">
         <img src="src/others/windowsLogo.svg" alt="Windows Logo" width="70" />
-        <img src="src/others/bootLoader.gif" alt="Windows boot loader" width="50" />
+        <img src="src/others/bootLoader.gif" alt="Windows boot loader" width="50" height="50" />
     </div>
     <div class="boot-animation">
         <!-- does not work in google chrome if the video is not muted.
@@ -324,7 +334,7 @@
         </div>
         <div class="runBody">
             <div class="runBodyMessage"><img src="src/icons/runicon.png" alt="run Icon" id="runIconBody"><span>Type the name of the program, folder, document or internet resources, and windows will open it for you.</span></div>
-            <label for="runInputField">Open: </label><input type="text" id="runInputField" autocomplete=false>
+            <label for="runInputField">Open: </label><input type="text" id="runInputField" autocomplete="off">
         </div>
         <div class="runFooter">
             <button class="disabledButton" id="runOkBtn">Ok</button>
