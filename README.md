@@ -31,7 +31,7 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [X] ~~Add Black Screen of Death (BSOD)~~
  - [X] ~~Add Blue Screen of Death (BSOD)~~
  - [X] ~~Add Credits page~~
- - [ ] Add Touch Keyboard (On Screen Keyboard)
+ - [X] ~~Add Touch Keyboard (On Screen Keyboard)~~
  - [ ] Add Store containing web apps and projects
  - [ ] Windows 11 setup
  - [ ] Users can set Custom preferences during setup
