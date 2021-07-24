@@ -57,7 +57,7 @@ let bSlider = document.querySelector(".brightness input");
 bSlider.oninput = () => {
     var x = bSlider.valueAsNumber;
     silderBackground(bSlider, x);
-    x = x<20?80:100-x
+    x = x<20?80:100-x;
     document.querySelector(".brightness-overlay").style.background = `rgb(0 0 0 / ${x}%)`
 }
 let vSlider = document.querySelector(".volume input");

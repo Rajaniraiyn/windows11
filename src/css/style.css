@@ -10,7 +10,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    /* background: #fff url(wallpaper/light.jpg) center center/cover no-repeat; */
+    /* background: #fff url(wallpaper/img18.jpg) center center/cover no-repeat; */
     background: none;
     display: grid;
     grid-template-columns: 1fr;
@@ -234,6 +234,8 @@ figure {
 }
 
 .iconName {
+    color: white;
+    text-shadow: 0 0 4px black, 0 0 3px black;
     font-size: 12px;
     text-align: center;
     margin-top: 5px;
@@ -367,7 +369,7 @@ figure {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: #fff url("../wallpaper/lockscreen.jpg") center center/cover no-repeat;
+    background: #fff url("../wallpaper/img100.jpg") center center/cover no-repeat;
     position: relative;
     display: none;
 }

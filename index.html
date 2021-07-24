@@ -18,6 +18,7 @@
     <meta property="og:url" content="https://repository-images.githubusercontent.com/383476453/3a749fd6-31c2-41ef-99ab-3c2d8405311e">
     <meta property="og:image" content="/">
     <meta property="og:description" content="A simple Windows 11 experience within browser.">
+    <link rel="preload" href="src/wallpaper/img18.jpg" as="image">
     <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -353,6 +354,7 @@
         <div class="keys" data-value="Alt" id="altKey">Alt</div>
         <div class="keys" data-value="Ctrl" id="ctrlKey">Ctrl</div>
     </div>
+    <div class="imagesToBePreloaded" style="display: none;"></div>
     <!-- winver window definition -->
     <!-- <div class="winverWindowDefinition">
         <div>
@@ -366,7 +368,7 @@
     -->
     <script src="src/js/boot.js"></script>
     <script src="src/js/start.js"></script>
-    <script src="src/js/contextMenu.js"></script>
+    <script src="src/js/desktop.js"></script>
     <script src="src/js/window.js"></script>
     <script src="src/js/run.js"></script>
     <script src="src/js/keyboard.js"></script>
