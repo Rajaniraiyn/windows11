@@ -30,7 +30,7 @@ I am not afflicted to Microsoft. All Copyrights to Microsoft. This is purely for
  - [X] ~~Add Tooltips~~
  - [X] ~~Add Black Screen of Death (BSOD)~~
  - [X] ~~Add Blue Screen of Death (BSOD)~~
- - ~~[X] Add Credits page~~
+ - [X] ~~Add Credits page~~
  - [ ] Add Touch Keyboard (On Screen Keyboard)
  - [ ] Add Store containing web apps and projects
  - [ ] Windows 11 setup
