@@ -1,0 +1,80 @@
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+  display: none;
+}
+
+@font-face{
+  font-family: QuantumCustomFontOne;
+  src: url(Fonts/QuantumCustomFontOne.ttf);
+}
+
+body{
+  font-family: 'Staatliches', cursive;
+}
+
+h2{
+  color: #474747;
+}
+
+.profile-picture{
+  border-radius: 100%; 
+  Width: 95px; 
+  Height: 95px;
+}
+
+#varified-tick{
+  font-size: 32px; 
+  text-align: right; 
+  padding: 16px; 
+  color: #34bdeb;
+}
+
+#profile-icon{
+  font-size: 32px; 
+  text-align: right; 
+  padding: 16px; 
+  color: #474747;
+}
+
+.navii{
+  background-color: #52bf83;
+  color: whitesmoke;
+}
+
+.navbar-brand{
+  color: whitesmoke;
+}
+
+.img-fluid-x{
+  width: 800px;
+  height: 600px;
+}
+
+.img-fluid-y{
+  width: 600px;
+  height: 400px;
+}
+
+#email{
+  color: 28ed8b;
+}
+
+#github{
+  color: black;
+}
+
+#youtube{
+  color: red;
+}
+
+#instagram{
+  color: #ff0066;
+}
+
+.card-body{
+  text-align: center;
+}
+
+.img-fluid-icon{
+  width: 150px;
+  height: 150px;
+}
