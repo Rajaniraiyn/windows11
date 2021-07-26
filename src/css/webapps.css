@@ -42,7 +42,7 @@
 /* *for apps other than winver and run* */
 .window[data-id="Microsoft Edge1"],
 .window[data-id="Visual Studio Code1"],
-.window[data-id="Windows PowerShell Beta1"] {
+.window[data-id="Windows PowerShell1"] {
   min-width: 50vw;
   min-height: 50vh;
   display: grid;
@@ -52,14 +52,14 @@
 }
 .window[data-id="Microsoft Edge1"] .windowBody,
 .window[data-id="Visual Studio Code1"] .windowBody,
-.window[data-id="Windows PowerShell Beta1"] .windowBody {
+.window[data-id="Windows PowerShell1"] .windowBody {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
 .window[data-id="Microsoft Edge1"] .windowBody iframe,
 .window[data-id="Visual Studio Code1"] .windowBody iframe,
-.window[data-id="Windows PowerShell Beta1"] iframe {
+.window[data-id="Windows PowerShell1"] iframe {
   border: none;
   height: 100% !important;
   width: 100% !important;
