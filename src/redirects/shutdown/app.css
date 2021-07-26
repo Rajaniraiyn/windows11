@@ -1,3 +1,15 @@
+@keyframes background {
+    0% {
+        background-position:0% 99%
+    }
+    50%{
+        background-position:100% 2%
+    }
+    100%{
+        background-position:0% 99%
+    }
+}
+
 html{
     font-family: Roboto;
 }
@@ -6,9 +18,12 @@ body {
     background-color:#caf0f8;
     height: 95vh;
     background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    background-size: 400% 400%;
+    animation: background 7s linear infinite;
 }
 a{
     text-decoration: none;
+    padding: 10px;
 }
 h1 {
     color: #fff;
