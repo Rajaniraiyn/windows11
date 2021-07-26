@@ -21,14 +21,6 @@ document.addEventListener("click", (e) => {
     } else if (e.target.offsetParent != document.querySelector(".start")) {
         document.querySelector(".start").classList.remove("show-start");
     };
-    // I tried this but not working for Action center
-    /*
-    if(e.target.offsetParent != document.querySelector(".action-center")) {
-        document.querySelector(".action-center").style.setProperty("transform","translateY(660px)")
-    }
-    if (e.target.offsetParent == document.querySelector(".action-center")) {
-        console.log("clicked in action center")
-    }*/
 });
 
 // for Date Time
@@ -50,14 +42,14 @@ document.querySelector(".action-center figure:nth-child(4) > img").onclick = () 
 
 // for Action Center
 let acButton = document.querySelector(".action-center-button")
-acButton.onclick = (e) => {
+/*acButton.onclick = (e) => {
     document.querySelector(".action-center").style.setProperty("transform","translateY(0)");
-}
+}*/
 let bSlider = document.querySelector(".brightness input");
 bSlider.oninput = () => {
     var x = bSlider.valueAsNumber;
     silderBackground(bSlider, x);
-    x = x<20?80:100-x;
+    x = x < 20 ? 80 : 100 - x;
     document.querySelector(".brightness-overlay").style.background = `rgb(0 0 0 / ${x}%)`
 }
 let vSlider = document.querySelector(".volume input");
@@ -65,20 +57,28 @@ vSlider.oninput = () => {
     silderBackground(vSlider, vSlider.value)
 }
 function silderBackground(elem, x) {
-    elem.style.setProperty("--track-color", `linear-gradient(90deg, #005fba ${x}%, #888888 ${x}%)`) 
+    elem.style.setProperty("--track-color", `linear-gradient(90deg, #005fba ${x}%, #888888 ${x}%)`)
+}
+document.getElementById('acCheck').onclick = _ => {
+    if (document.getElementById('acCheck').checked) {
+        document.querySelector(".action-center").style.setProperty("transform", "translateY(660px)");
+    }
+    else if (document.getElementById('acCheck').checked == false) {
+        document.querySelector(".action-center").style.setProperty("transform", "translateY(0)");
+    }
 }
 
 // for Battery /* *Use extra when needed* */
 (function () {
     let /*batterySupported = document.getElementById("battery-supported"),*/
         batteryLevel = document.querySelector("body > div.action-center > div.ac-bottom > div.battery > span");
-        /*chargingStatus = document.getElementById("charging-status"),
-        batteryCharged = document.getElementById("battery-charged"),
-        batteryDischarged = document.getElementById("battery-discharged");*/
+    /*chargingStatus = document.getElementById("charging-status"),
+    batteryCharged = document.getElementById("battery-charged"),
+    batteryDischarged = document.getElementById("battery-discharged");*/
 
     let success = function (battery) {
         if (battery) {
-            function setStatus () {
+            function setStatus() {
                 console.log("Set status");
                 batteryLevel.innerHTML = Math.round(battery.level * 100) + "%";
                 // use these when notification is ready

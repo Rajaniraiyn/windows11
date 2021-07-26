@@ -55,3 +55,7 @@ body {
 .minimized {
     animation: minimize .4s forwards
 }
+
+.brightness-overlay {
+    transition: background-color 0.3s linear;
+}
