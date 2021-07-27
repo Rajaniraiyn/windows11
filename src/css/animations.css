@@ -59,3 +59,7 @@ body {
 .brightness-overlay {
     transition: background-color 0.3s linear;
 }
+
+.center img:active, figure:active img {
+    transform: scale(0.8) !important;
+}
