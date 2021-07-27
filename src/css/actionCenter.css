@@ -205,3 +205,7 @@ input[type=range]:focus::-ms-fill-upper {
     position: absolute;
     background-color: rgb(0 0 0 / 0);
 }
+
+.center img:active, figure:active img {
+    transform: scale(0.8) !important;
+}
