@@ -10,7 +10,7 @@
 body {
     width: 100vw;
     height: 100vh;
-    /* background: #fff url(wallpaper/img18.jpg) center center/cover no-repeat; */
+    /* background: #fff url(wallpaper/img18.webp) center center/cover no-repeat; */
     background: none;
     display: grid;
     grid-template-columns: 1fr;
@@ -369,7 +369,7 @@ figure {
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: #fff url("../wallpaper/img100.jpg") center center/cover no-repeat;
+    background: #fff url("../wallpaper/img100.webp") center center/cover no-repeat;
     position: relative;
     display: none;
 }

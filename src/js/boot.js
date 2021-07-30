@@ -7,7 +7,7 @@ function skipBoot() {
     document.querySelector(".desktop").style.display = "block";
     document.querySelector(".taskbar").style.display = "grid";
     document.querySelector(".start").style.display = "block";
-    document.body.style.background = "#fff url(src/wallpaper/img18.jpg) center center/cover no-repeat";
+    document.body.style.background = "#fff url(src/wallpaper/img18.webp) center center/cover no-repeat";
 }
 // skipBoot();
 if (window.location.hash == "#dev") {
@@ -42,7 +42,7 @@ function boot() {
         document.querySelector(".desktop").style.display = "block";
         document.querySelector(".taskbar").style.display = "grid";
         document.querySelector(".start").style.display = "block";
-        document.body.style.background = "#fff url(src/wallpaper/img18.jpg) center center/cover no-repeat";
+        document.body.style.background = "#fff url(src/wallpaper/img18.webp) center center/cover no-repeat";
     }, 3000)
 }
 // making  the date and time in the  lock Screen dynamic

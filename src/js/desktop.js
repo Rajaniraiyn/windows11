@@ -67,10 +67,10 @@ window.oncontextmenu = (e) => {
 
 // for Changing Wallpaper
 var wi = 0;
-var wIds = [18, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]; //these wallpapers are suitable for light theme
+var wIds = [18, 28, 29, 30, 31, 32, 33, 34, 35]; //these wallpapers are suitable for light theme
 function changeWallpaper() {
     wi > 10 ? wi = 0 : wi += 1;
-    document.body.style.backgroundImage = `url(src/wallpaper/img${wIds[wi]}.jpg)`;
+    document.body.style.backgroundImage = `url(src/wallpaper/img${wIds[wi]}.webp)`;
 }
 setInterval(() => {
     changeWallpaper();
@@ -78,5 +78,5 @@ setInterval(() => {
 
 var PreImg = document.querySelector(".imagesToBePreloaded");
 for (var i = 0; i < wIds.length; i++) {
-    PreImg.innerHTML += `<img src="src/wallpaper/img${wIds[i]}.jpg" width="1" height="1" border="0">\n`
+    PreImg.innerHTML += `<img src="src/wallpaper/img${wIds[i]}.webp" width="1" height="1" border="0">\n`
 }
