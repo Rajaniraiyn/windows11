@@ -63,3 +63,7 @@ body {
 .center img:active, figure:active img {
     transform: scale(0.8) !important;
 }
+
+.notification {
+    transition: all 0.4s ease;
+}
