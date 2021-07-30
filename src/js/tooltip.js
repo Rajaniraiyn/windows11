@@ -66,3 +66,111 @@ tippy('.action-center-button', {
     theme: 'light',
     delay: [1000, 100]
 });
+tippy('#shutdown', {
+    content: 'Shut Down',
+    placement: 'top',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('.user', {
+    content: 'Rajaniraiyn',
+    placement: 'top',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#allapps', {
+    content: 'All Apps',
+    placement: 'left',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startEdge', {
+    content: 'Microsoft Edge',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startWord', {
+    content: 'Word',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startExcel', {
+    content: 'Excel',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startPowerPoint', {
+    content: 'PowerPoint',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startMail', {
+    content: 'Mail',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startCalendar', {
+    content: 'Calendar',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startStore', {
+    content: 'MS Store',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startPhotos', {
+    content: 'Photos',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startOneNote', {
+    content: 'One Note',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startYourPhone', {
+    content: 'Your Phone',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startToDo', {
+    content: 'To Do',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startLinkedIn', {
+    content: 'LinkedIn',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startSettings', {
+    content: 'Settings',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startCalci', {
+    content: 'Calculator',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startWhiteboard', {
+    content: 'Whiteboard',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startSnip', {
+    content: 'Snipping Tool',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startMovies', {
+    content: 'Movies & TV',
+    theme: 'light',
+    delay: [1000, 100]
+});
+tippy('#startClock', {
+    content: 'Clock',
+    theme: 'light',
+    delay: [1000, 100]
+});
