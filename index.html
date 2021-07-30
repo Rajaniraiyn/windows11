@@ -94,10 +94,10 @@
     works even on chrome with certain criteria fulfilled:
     For more details: 
     https://developers.google.com/web/updates/2017/09/autoplay-policy-changes -->
-        <video preload="auto" width="150" height="150" id="startupVideo">
-            <source src="src/others/bootAnimation.webm#t=0.6" type="video/webm">
-            <source src="src/others/bootAnimation.mp4#t=0.6" type="video/mp4">
-        </video>
+        <audio preload="auto" width="150" height="150" id="startupAudio">
+            <source src="src/sounds/Windows Startup.webm" type="audio/webm">
+            <source src="src/sounds/Windows Startup.mp3" type="audio/mp3">
+        </audio>
     </div>
 
     <!-- EDGE BROWSER -->
@@ -257,6 +257,7 @@
             <div class="time-date">
                 <span></span>
                 <span></span>
+                <input type="checkbox" name="ncCheck" id="ncCheck" style="display: none;" checked>
             </div>
         </div>
     </div>

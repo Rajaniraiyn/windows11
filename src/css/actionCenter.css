@@ -225,7 +225,7 @@ input[type=range]:focus::-ms-fill-upper {
     grid-template-rows: 30px 1fr;
     width: 320px;
     border-radius: 7px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.5);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
 }
@@ -251,9 +251,10 @@ input[type=range]:focus::-ms-fill-upper {
     grid-template-rows: 30px auto;
     grid-gap: 5px;
     border-radius: 7px;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgba(248, 248, 248, 0.5);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+    transform: translateX(100%);
 }
 .notification-top {
     display: grid;
@@ -276,4 +277,19 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .notification .content p {
     font-size: 0.9rem;
+}
+
+.notification-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.notification-buttons button {
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
 }

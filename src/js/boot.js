@@ -3,7 +3,7 @@ let powerOnBox = document.querySelector(".powerOnBox");
 let powerOnBtn = document.getElementById("powerOnBtn");
 // turning off the boot process for development purpose
 function skipBoot() {
-    powerOnBox.style.display = "none";
+    powerOnBox.remove();
     document.querySelector(".desktop").style.display = "block";
     document.querySelector(".taskbar").style.display = "grid";
     document.querySelector(".start").style.display = "block";
@@ -22,17 +22,17 @@ else {
 
 function boot() {
     // Boot the os after the power button has been clicked
-    powerOnBox.style.display = "none";
+    powerOnBox.remove();
     document.querySelector(".boot").style.display = "flex";
     // display .boot box for 3 seconds and play the video of starting windows
     setTimeout(() => {
-        document.querySelector(".boot").style.display = "none";
+        document.querySelector(".boot").remove();
         // play the video
         document.querySelector(".boot-animation").style.display = "flex";
-        document.getElementById("startupVideo").play();
+        document.getElementById("startupAudio").play();
         // remove the video div after the video has been played
-        document.getElementById("startupVideo").addEventListener("ended", event => {
-            document.querySelector(".boot-animation").style.display = "none";
+        document.getElementById("startupAudio").addEventListener("ended", event => {
+            document.querySelector(".boot-animation").remove()
         })
 
         // Ask user for password
