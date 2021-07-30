@@ -94,8 +94,8 @@ function passwordPhase() {
         passwordField.addEventListener("keyup", event => {
             if (passwordField.value == "12345") {
                 console.log("login was successful");
-                passwordDialog.style.display = "none";
-                lockScreen.style.display = "none";
+                passwordDialog.remove();
+                lockScreen.remove();
                 // alert("apply a loader here..if you like..");
             }
         })
