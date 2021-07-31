@@ -38,8 +38,3 @@ function notificationClose(id) {
         nElem.remove();
     }, 400);
 }
-
-desktop.addEventListener("click", function firstNotify() {
-    notify("src/icons/settings.svg", "Settings", "Welcome to Windows 11!", "Congratulations You have successfully Booted Windows 11");
-    desktop.removeEventListener("click", firstNotify)
-})
