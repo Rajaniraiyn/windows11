@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Calculator</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+
+            body{
+                /*overflow: hidden;*/
+            }
+            
+            #btn-file,
+            #btn-edit,
+            #btn-format,
+            #btn-view,
+            #btn-help{
+                border-radius: 0px;
+                background-color: #fcfefe;
+            }
+
+            .btn-group{
+                background-color: whitesmoke;
+            }
+
+            #notepadTextArea{
+                width: 100vw;
+                height: 80vh;
+                border: none;
+                text-decoration: none;
+                overflow: auto;
+                resize: none;
+                outline: none;
+            }
+
+            /*Window css*/
+            #mainWindowContainer{
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+            }
+
+            #divToolBar{
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                background-color: #fcfefe;
+            }
+
+            #divTextArea{
+                margin: 0px;
+                padding: 0px;
+                width: 100%;
+                height: 100%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="mainWindowContainer" class="container-fluid">
+
+            <div id="divToolBar" class="col-12">
+
+                <div class="btn-group">
+                  <a href="#" id="btn-file" class="btn btn-light">File</a>
+                  <a href="#" id="btn-edit" class="btn btn-light">Edit</a>
+                  <a href="#" id="btn-format" class="btn btn-light">Format</a>
+                  <a href="#" id="btn-view" class="btn btn-light">View</a>
+                  <a href="#" id="btn-help" class="btn btn-light">Help</a>
+                </div>                
+            </div>
+
+            <div style="padding: none; margin: none;"><hr></div>
+
+            <div id="divTextArea" class="col-12">
+                <textarea id="notepadTextArea" name="textArea" placeholder="Welcome to Notepad Start Typing here...">
+Welcome to Notepad Start Typing here...
+
+Windows 11 within the browser. This is not just an image but real elements which are completely inspired from Windows 11 design to give people who really love Windows 11, thanks for using Windows 11 web, we are happy to see you here using our project😁✌.
+                </textarea>
+            </div>             
+            </div>
+        </div>
+    </body>
+
+</html>
