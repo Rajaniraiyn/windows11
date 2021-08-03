@@ -68,7 +68,7 @@ runInputField.addEventListener("keyup", event => {
 
 });
 let apps;
-fetch("/src/apps/apps.json")
+fetch("src/apps/apps.json")
     .then(response => response.json())
     .then(json => apps = json);
 
