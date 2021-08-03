@@ -40,9 +40,7 @@
 }
 
 /* *for apps other than winver and run* */
-.window[data-id="Microsoft Edge1"],
-.window[data-id="Visual Studio Code1"],
-.window[data-id="Windows PowerShell1"] {
+.window {
   min-width: 50vw;
   min-height: 50vh;
   display: grid;
@@ -50,17 +48,28 @@
   grid-template-rows: 30px 1fr;
   resize: both;
 }
-.window[data-id="Microsoft Edge1"] .windowBody,
-.window[data-id="Visual Studio Code1"] .windowBody,
-.window[data-id="Windows PowerShell1"] .windowBody {
+.window .windowBody {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-.window[data-id="Microsoft Edge1"] .windowBody iframe,
-.window[data-id="Visual Studio Code1"] .windowBody iframe,
-.window[data-id="Windows PowerShell1"] iframe {
+.window .windowBody iframe {
   border: none;
-  height: 100% !important;
-  width: 100% !important;
+  height: 100%;
+  width: 100%;
+}
+
+.window[data-id="About Windows1"] {
+  min-height: auto;
+  min-width: auto;
+  resize: none;
+}
+
+.window[data-id="About Windows1"] .windowBody {
+  width: 460px;
+  height: 390px;
+}
+
+.runDialog {
+  display: none;
 }

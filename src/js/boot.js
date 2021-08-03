@@ -1,3 +1,10 @@
+//getting cookies
+function getCookie(name) {
+    let result = document.cookie.match("(^|[^;]+)\\s*" + name + "\\s*=\\s*([^;]+)")
+    return result ? result.pop() : ""
+}
+const firstBoot = getCookie("firstBoot") == 1 ? true : false;
+
 // accessing required elements
 let powerOnBox = document.querySelector(".powerOnBox");
 let powerOnBtn = document.getElementById("powerOnBtn");
@@ -97,16 +104,23 @@ function passwordPhase() {
                 passwordDialog.remove();
                 clearInterval(timer)
                 lockScreen.remove();
-                setTimeout(notify, 1e3, "src/icons/settings.svg", "Settings", "Welcome to Windows 11!", "Congratulations You have successfully Booted Windows 11")
-                setTimeout(_ => {
-                    // notifies firefox uses to enable backdrop-filter flag
-                    if (window.navigator.userAgent.indexOf("Firefox") > -1) {
-                        if (CSS.supports("(backdrop-filter:blur(20px))") != true) {
-                            notify("src/icons/settings.svg", "Settings", "Hello Firefox User", "To get full UI experience please go to \"<span style=user-select:all>about:config</span>\" and search for \"layout.css.backdrop-filter.enabled\" and set it to \"true\"")
+                if (firstBoot) {
+                    setTimeout(notify, 1e3, "src/icons/settings.svg", "Settings", "Welcome to Windows 11!", "Congratulations You have successfully Booted Windows 11")
+                    setTimeout(_ => {
+                        // notifies firefox uses to enable backdrop-filter flag
+                        if (window.navigator.userAgent.indexOf("Firefox") > -1) {
+                            if (CSS.supports("(backdrop-filter:blur(20px))") != true) {
+                                notify("src/icons/settings.svg", "Settings", "Hello Firefox User", "To get full UI experience please go to \"<span style=user-select:all>about:config</span>\" and search for \"layout.css.backdrop-filter.enabled\" and set it to \"true\"")
+                            }
                         }
-                    }
-                }, 2e3)
-                setTimeout(notify, 5e3, "src/icons/edge.svg", "Microsoft Edge", "All new Browser is here", "Your Edge browser got updated for Windows 11 \n Please try it out.")
+                    }, 2e3)
+                    setTimeout(notify, 10e3, "src/icons/edge.svg", "Microsoft Edge", "All new Browser is here", "Your Edge browser got updated for Windows 11 \n Please try it out.")
+                    startTutorials();
+                }
+                if (getCookie("cookiesAccepted") == "") {
+                    notify("src/icons/settings.svg", "Settings", "Windows 11 uses Cookies", "To improve user experience this Windows 11 uses cookies", "Accept", `document.cookie='cookiesAccepted=1;expires='+new Date(2147483647*1000).toUTCString();notificationClose("#n${nId}")`);
+                }
+                document.cookie = 'firstBoot=0; expires=' + new Date(2147483647 * 1000).toUTCString();
                 // alert("apply a loader here..if you like..");
             }
         })

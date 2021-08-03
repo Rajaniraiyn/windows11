@@ -67,13 +67,18 @@ runInputField.addEventListener("keyup", event => {
     }
 
 });
+let apps;
+fetch("/src/apps/apps.json")
+    .then(response => response.json())
+    .then(json => apps = json);
 
-// added temporary Beta PowerShell
+let allSchemes = ["min", "max", "cross"];
+
+/*
 let allPrograms = ["winver", "powershell", "msedge", "vscode"];
 let allProgramsTitleName = ["About Windows", "Windows PowerShell", "Microsoft Edge", "Visual Studio Code"];
 let allProgramsBody = ["src/apps/winver.html", "src/apps/powershell.html", "src/apps/edge.html", "src/apps/vscode.html"]
 let allProgramIcons = ["src/icons/favicon.png", "src/icons/terminal.png", "src/icons/edge.svg", "src/icons/vscode.svg"];
-let allSchemes = ["min", "max", "cross"];
 let allProgramsIconsSchemes = [
     ["cross"],
     allSchemes,
@@ -81,9 +86,10 @@ let allProgramsIconsSchemes = [
     allSchemes,
     allSchemes
 ];
+*/
 
 function searchPrograms(givenProgram) {
-    if (allPrograms.includes(givenProgram)) {
+    if (apps.hasOwnProperty(givenProgram)) {
         return givenProgram;
     } else {
         return false;
@@ -91,21 +97,18 @@ function searchPrograms(givenProgram) {
 }
 
 function executeProgram(programName) {
-    let index = allPrograms.indexOf(programName);
-    let icon = allProgramIcons[index];
-    let programTitle = allProgramsTitleName[index];
-    let programBody = allProgramsBody[index];
-    let options = allProgramsIconsSchemes[index];
-    let win1 = new Window(programTitle, "black", "white", icon, programBody, options);
+    let app = apps[programName];
+    let options = app.titleBarScheme==undefined?allSchemes:app.titleBarScheme;
+    let win1 = new Window(app.name, "black", "white", app.icon, app.src, options);
     win1.createWindow();
-    console.log(win1)
+    //console.log(win1)
 
 }
 let windowCrossers = document.getElementsByClassName("windowCrosser");
 Array.from(windowCrossers).forEach(item => {
     item.addEventListener("click", event => {
         let windows = event.target.parentNode.parentNode.parentNode;
-        console.log(windows);
+        //console.log(windows);
         if (windows.classList.contains("window")) {
             windows.style.display = "none";
         } else {

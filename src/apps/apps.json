@@ -1,0 +1,45 @@
+{
+    "winver": {
+        "name": "About Windows",
+        "src": "src/apps/winver.html",
+        "icon": "src/icons/favicon.png",
+        "titleBarScheme": [
+            "cross"
+        ]
+    },
+    "powershell": {
+        "name": "Windows PowerShell",
+        "src": "src/apps/powershell.html",
+        "icon": "src/icons/terminal.png"
+    },
+    "msedge": {
+        "name": "Microsoft Edge",
+        "src": "src/apps/edge.html",
+        "icon": "src/icons/edge.svg"
+    },
+    "vscode": {
+        "name": "Visual Studio Code",
+        "src": "src/apps/vscode.html",
+        "icon": "src/icons/vscode.svg"
+    },
+    "notepad": {
+        "name": "Untitled - Notepad",
+        "src": "src/apps/Notepad/notepad.html",
+        "icon": "src/icons/notepad.svg"
+    },
+    "calculator": {
+        "name": "Calculator",
+        "src": "src/apps/Calculator/calc.html",
+        "icon": "src/icons/calculator.svg"
+    },
+    "excel": {
+        "name": "Microsoft Excel",
+        "src": "src/apps/excel.html",
+        "icon": "src/icons/excel.svg"
+    },
+    "powerpoint": {
+        "name": "Microsoft PowerPoint",
+        "src": "src/apps/powerpoint.html",
+        "icon": "src/icons/powerPoint.svg"
+    }
+}

@@ -454,18 +454,16 @@ figure {
 .window {
     position: absolute;
     z-index: 50;
-    min-height: 100px;
-    min-width: 200px;
     background: rgba(255, 255, 255, .596);
-    backdrop-filter: blur(20.5px);
     -webkit-backdrop-filter: blur(20.5px);
-    /*transition: .2s border ease;*/
+    backdrop-filter: blur(20.5px);
     border-radius: 6px;
-    box-shadow: 0 2.8px 2.2px rgb(0 0 0 / 2%), 0 6.7px 5.3px rgb(0 0 0 / 3%), 0 12.5px 10px rgb(0 0 0 / 4%), 0 22.3px 17.9px rgb(0 0 0 / 4%), 0 41.8px 33.4px rgb(0 0 0 / 5%), 0 100px 80px rgb(0 0 0 / 7%);
-    /*animation: .3s _Pop_ufurh_1 ease;*/
+    box-shadow: 0 2.8px 2.2px rgb(0,0,0,.2), 0 6.7px 5.3px rgb(0 0 0 / 3%), 0 12.5px 10px rgb(0 0 0 / 4%), 0 22.3px 17.9px rgb(0 0 0 / 4%), 0 41.8px 33.4px rgb(0 0 0 / 5%), 0 100px 80px rgb(0 0 0 / 7%);
 }
 
 .runDialog {
+    min-width: auto !important;
+    min-height: auto !important;
     width: 360px;
     position: absolute;
     bottom: 50px;
@@ -590,12 +588,6 @@ label[for="runInputField"] {
 
 .windowOptions:hover {
     background-color: #F5F5F5;
-}
-
-.windowBody {
-    min-height: 100px;
-    width: 100%;
-    /* background-color: orange; */
 }
 
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft PowerPoint</title>
+    <style>
+        @page {
+            size: 6in 8in landscape;
+        }
+
+        html {
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toolbar"></div>
+    <script>
+        d = document;
+        for (i = 0; i < 50; i++) {
+            d.body.innerHTML += '<div style="position:relative;width:90%;padding-top:60%;margin:5%;border:1px solid silver;page-break-after:always;"><div contenteditable style="outline:none;position:absolute;right:10%;bottom:10%;left:10%;top:10%;font-size:5vmin;"></div></div>';
+        }
+        d.querySelectorAll("div>div").forEach(e => e.onkeydown = e => {
+            n = e.ctrlKey && e.altKey && e.keyCode - 49,
+                x = ["formatBlock", "formatBlock", "justifyLeft", "justifyCenter", "justifyRight", "outdent", "indent", "insertUnorderedList"][n],
+                y = ["<h1>", "<div>"][n],
+                x && document.execCommand(x, !1, y)
+        })
+    </script>
+</body>
+
+</html>
