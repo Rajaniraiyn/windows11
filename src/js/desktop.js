@@ -14,10 +14,10 @@ let normalizePosition = (mouseX, mouseY, parent, children) => {
 
     // ? check if the element will go out of bounds
     var outOfBoundsOnX =
-        scopeX + children.clientWidth > parent.clientWidth;
+        scopeX + children.clientWidth * .75 > parent.clientWidth;
 
     var outOfBoundsOnY =
-        scopeY + children.clientHeight > parent.clientHeight;
+        scopeY + children.clientHeight * .75 > parent.clientHeight;
 
     var normalizedX = mouseX;
     var normalizedY = mouseY;
@@ -25,13 +25,13 @@ let normalizePosition = (mouseX, mouseY, parent, children) => {
     // ? normalize on X
     if (outOfBoundsOnX) {
         normalizedX =
-            scopeOffsetX + parent.clientWidth - children.clientWidth;
+            scopeOffsetX + parent.clientWidth - children.clientWidth * .75;
     }
 
     // ? normalize on Y
     if (outOfBoundsOnY) {
         normalizedY =
-            scopeOffsetY + parent.clientHeight - children.clientHeight;
+            scopeOffsetY + parent.clientHeight - children.clientHeight * .75;
     }
 
     return { normalizedX, normalizedY };

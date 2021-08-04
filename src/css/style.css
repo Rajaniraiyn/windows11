@@ -79,10 +79,10 @@ body {
     width: -webkit-max-content;
     width: max-content;
     background-color: rgba(255, 255, 255, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.125);
+    border: 1px solid rgba(255, 255, 255, 0.125);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border-radius: 10px;
+    border-radius: 7px;
     transform: scale(0);
     transform-origin: top left;
     padding: 5px;
@@ -90,7 +90,7 @@ body {
 }
 
 #context-menu.visible {
-    transform: scale(1);
+    transform: scale(0.75);
     transition: transform 100ms ease-in-out;
 }
 
