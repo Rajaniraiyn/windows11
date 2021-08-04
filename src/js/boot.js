@@ -1,7 +1,11 @@
 //getting cookies
 function getCookie(name) {
-    let result = document.cookie.match("(^|[^;]+)\\s*" + name + "\\s*=\\s*([^;]+)")
+    var result = document.cookie.match("(^|[^;]+)\\s*" + name + "\\s*=\\s*([^;]+)")
     return result ? result.pop() : ""
+}
+//setting cookies
+function setCookie(name, value) {
+    document.cookie = name + "=" + value + "; expires=" + new Date(2147483647 * 1000).toUTCString();
 }
 const firstBoot = getCookie("firstBoot") == 1 ? true : false;
 
@@ -118,9 +122,9 @@ function passwordPhase() {
                     startTutorials();
                 }
                 if (getCookie("cookiesAccepted") == "") {
-                    notify("src/icons/settings.svg", "Settings", "Windows 11 uses Cookies", "To improve user experience this Windows 11 uses cookies", "Accept", `document.cookie='cookiesAccepted=1;expires='+new Date(2147483647*1000).toUTCString();notificationClose("#n${nId}")`);
+                    notify("src/icons/settings.svg", "Settings", "Windows 11 uses Cookies", "To improve user experience this Windows 11 uses cookies", "Accept", `setCookie('cookiesAccepted','1');notificationClose('#n${nId}')`);
                 }
-                document.cookie = 'firstBoot=0; expires=' + new Date(2147483647 * 1000).toUTCString();
+                setCookie("firstBoot", "0")
                 // alert("apply a loader here..if you like..");
             }
         })
