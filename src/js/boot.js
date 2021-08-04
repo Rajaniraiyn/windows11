@@ -7,7 +7,7 @@ function getCookie(name) {
 function setCookie(name, value) {
     document.cookie = name + "=" + value + "; expires=" + new Date(2147483647 * 1000).toUTCString();
 }
-const firstBoot = getCookie("firstBoot") == 0 ? false : true;
+const firstBoot = getCookie("firstBoot") === 0 ? false : true;
 
 // accessing required elements
 let powerOnBox = document.querySelector(".powerOnBox");
