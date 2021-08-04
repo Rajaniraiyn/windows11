@@ -28,6 +28,36 @@
     }
 }
 
+@keyframes line-animation {
+
+    0%,
+    to {
+        transform: translateY(0);
+    }
+
+    10%,
+    85% {
+        transform: translateY(10px);
+    }
+
+    40%,
+    60% {
+        transform: translateY(-25px);
+    }
+}
+
+@keyframes click-animation {
+
+    0%,
+    to {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+}
+
 body {
     transition: background-image 2s linear 0s;
 }

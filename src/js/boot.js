@@ -25,9 +25,11 @@ if (window.location.hash == "#dev") {
     skipBoot()
 }
 else {
-    powerOnBtn.addEventListener("click", event => {
-        fullScreen();
-        boot();
+    powerOnBtn.addEventListener("click", _ => {
+        setTimeout( _ => {
+            fullScreen();
+            boot();
+        }, 1e3)
     })
 }
 

@@ -86,10 +86,28 @@
 
     <!-- making a power on div and make user click a button so that we can autoplay videos -->
     <div class="powerOnBox">
-        <div>
-            <img src="src/icons/shutdown.png" alt="Power On Button" id="powerOnBtn">
-            <figcaption>Click to start the machine</figcaption>
+        <div class="power-switch" id="powerOnBtn">
+            <input type="checkbox" />
+            <div class="button">
+                <svg class="power-off">
+                    <use xlink:href="#a" class="a" />
+                    <use xlink:href="#b" class="b" />
+                </svg>
+                <svg class="power-on">
+                    <use xlink:href="#a" class="a" />
+                    <use xlink:href="#b" class="b" />
+                </svg>
+            </div>
         </div>
+        <span style="color: lavender">Click to start the Machine</span>
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol xmlns="http://www.w3.org/2000/svg" id="a" viewBox="0 0 150 150">
+                <path d="M75 34v24" />
+            </symbol>
+            <symbol xmlns="http://www.w3.org/2000/svg" id="b" viewBox="0 0 150 150">
+                <circle cx="75" cy="80" r="35" />
+            </symbol>
+        </svg>
     </div>
     <!-- Boot Elements -->
     <div class="boot">

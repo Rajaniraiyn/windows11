@@ -316,38 +316,131 @@ figure {
 /* styling power on box */
 
 .powerOnBox {
+    background: #1b1a23;
     height: 100vh;
-    width: 100vw;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: none; */
-}
-
-.powerOnBox>div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.powerOnBox>div>img {
-    width: 350px;
-    background-color: lightgreen;
+.power-switch, .power-switch .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.power-switch {
+    --color-invert: #ffffff;
+    --width: 150px;
+    --height: 150px;
+    width: var(--width);
+    height: var(--height);
+}
+
+.power-switch .button {
+    width: 100%;
+    height: 100%;
+}
+
+.power-switch .button:after, .power-switch input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.power-switch .button:after {
+    content: "";
+    background: radial-gradient(circle closest-side, var(--color-invert), transparent);
+    filter: blur(20px);
+    transition: opacity 1s ease, transform 1s ease;
+    transform: perspective(1px) translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.power-switch .button .power-off, .power-switch .button .power-on {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    fill: none;
+    stroke: var(--color-invert);
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.power-switch .button .power-off .a {
+    opacity: 0.2;
+}
+
+.power-switch .button .power-off .b, .power-switch .button .power-on .b {
+    transform: rotate(-58deg);
+    transform-origin: center 80px;
+    stroke-dasharray: 220;
+}
+
+.power-switch .button .power-off .b {
+    opacity: 0.2;
+    stroke-dashoffset: 40;
+}
+
+.power-switch .button .power-on {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+}
+
+.power-switch .button .power-on .a {
+    opacity: 0;
+    transition: opacity 0.3s ease 1s;
+}
+
+.power-switch .button .power-on .b {
+    opacity: 1;
+    stroke-dashoffset: 220;
+    transition: transform 0s ease, stroke-dashoffset 1s ease 0s;
+}
+
+.power-switch input {
+    z-index: 2;
     cursor: pointer;
 }
 
-.powerOnBox>div>img:hover {
-    background-color: #58e758;
+.power-switch input:checked+.button:after {
+    opacity: 0.15;
+    transform: scale(2) perspective(1px) translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.powerOnBox>div>figcaption {
-    width: 100%;
-    font-size: 30px;
-    text-align: center;
-    color: green;
-    background-color: lightgreen;
+.power-switch input:checked+.button .power-off, .power-switch input:checked+.button .power-on {
+    -webkit-animation: click-animation 0.3s ease forwards;
+    animation: click-animation 0.3s ease forwards;
+    transform: scale(1);
+}
+
+.power-switch input:checked+.button .power-off .a, .power-switch input:checked+.button .power-on .a {
+    -webkit-animation: line-animation 0.8s ease-in forwards;
+    animation: line-animation 0.8s ease-in forwards;
+}
+
+.power-switch input:checked+.button .power-off .b {
+    transform: rotate(302deg);
+}
+
+.power-switch input:checked+.button .power-on .a {
+    opacity: 1;
+    transition: opacity 0.05s ease-in 0.55s;
+}
+
+.power-switch input:checked+.button .power-on .b {
+    transform: rotate(302deg);
+    stroke-dashoffset: 40;
+    transition: transform 0.4s ease 0.2s, stroke-dashoffset 0.4s ease 0.2s;
 }
 
 .boot {
