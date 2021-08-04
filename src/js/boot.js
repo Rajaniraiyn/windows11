@@ -122,11 +122,11 @@ function passwordPhase() {
                     }, 2e3)
                     setTimeout(notify, 10e3, "src/icons/edge.svg", "Microsoft Edge", "All new Browser is here", "Your Edge browser got updated for Windows 11 \n Please try it out.")
                     startTutorials();
+                    setCookie("firstBoot", "0");
                 }
                 if (getCookie("cookiesAccepted") == "") {
                     notify("src/icons/settings.svg", "Settings", "Windows 11 uses Cookies", "To improve user experience this Windows 11 uses cookies", "Accept", `setCookie('cookiesAccepted','1');notificationClose('#n${nId}')`);
                 }
-                setCookie("firstBoot", "0")
                 // alert("apply a loader here..if you like..");
             }
         })
