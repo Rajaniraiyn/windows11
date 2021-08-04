@@ -547,10 +547,10 @@ figure {
 .window {
     position: absolute;
     z-index: 50;
-    background: rgba(255, 255, 255, .596);
-    -webkit-backdrop-filter: blur(20.5px);
-    backdrop-filter: blur(20.5px);
-    border-radius: 6px;
+    background: rgb(255, 255, 255, .5);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
     box-shadow: 0 2.8px 2.2px rgb(0,0,0,.2), 0 6.7px 5.3px rgb(0 0 0 / 3%), 0 12.5px 10px rgb(0 0 0 / 4%), 0 22.3px 17.9px rgb(0 0 0 / 4%), 0 41.8px 33.4px rgb(0 0 0 / 5%), 0 100px 80px rgb(0 0 0 / 7%);
 }
 
