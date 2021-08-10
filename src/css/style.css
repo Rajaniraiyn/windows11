@@ -507,31 +507,31 @@ figure {
 }
 
 .userProfile {
-    height: 200px;
-    width: 200px;
     border-radius: 50%;
     margin: 10px;
+    background-color: lavender;
 }
 
 .userProfile>img {
-    width: 200px;
+    width: 100px;
 }
 
 .username {
-    font-size: 25px;
     margin: 10px 10px 15px 10px;
-    font-weight: lighter;
 }
 
-.passwordDialog>input {
-    font-size: 20px;
-    width: 250px;
+.passwordDialog input {
+    font-size: 0.9rem;
+    width: 150px;
     padding: 5px;
     outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .forgotOption {
     margin: 10px;
+    font-size: 0.9rem;
 }
 
 .otherSignInOption {
@@ -540,8 +540,8 @@ figure {
 
 .hint {
     color: #fafa00;
-    align-self: flex-start;
     margin: 2px;
+    font-size: 0.8rem;
 }
 
 .window {
@@ -730,4 +730,29 @@ label[for="runInputField"] {
 
 iframe {
     border: none;
+}
+
+.otherSignInOptions {
+    font-size: 0.9rem;
+}
+
+[data-tab-info] {
+    display: none;
+}
+
+.active[data-tab-info] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-in-methods {
+    display: flex;
+    justify-content: center;
+    filter: invert(1);
+}
+
+.sign-in-methods img {
+    width: 2rem;
+    margin-block: 10px;
 }

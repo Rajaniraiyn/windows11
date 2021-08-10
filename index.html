@@ -69,12 +69,39 @@
     </script>-->
     <!-- password dialog -->
     <div class="passwordDialog">
-        <div class="userProfile"><img src="src/icons/user.png" alt="User Profile"></div>
+        <div class="userProfile"><img src="src/icons/user.svg" alt="User Profile"></div>
         <div class="username">User Name</div>
-        <input type="password" placeholder="PIN" id="passwordField">
-        <span class="hint">Your password is: 12345</span>
-        <div class="forgotOption">I forgot my pin</div>
-        <div class="otherSignInOptions">Sign-in options</div>
+        <div class="sign-in-content">
+            <div class="sign-in-method active" id="method_1" data-tab-info>
+                <input type="password" placeholder="PIN" id="passwordField">
+                <span class="hint">Your password is: 12345</span>
+                <div class="forgotOption">I forgot my pin</div>
+            </div>
+            <div class="sign-in-method" id="method_2" data-tab-info>
+                <img src="src/others/needed/windowsHello.webp" width="35" style="margin-block-end: 10px;">
+            </div>
+        </div>
+        <div class="otherSignInOptions">Sign-in options
+            <div class="sign-in-methods">
+                <img data-tab-value="#method_1" src="src/icons/dialpad.svg">
+                <img data-tab-value="#method_2" src="src/icons/eye.svg">
+            </div>
+        </div>
+        <script>
+            var sIMethods = document.querySelectorAll('[data-tab-value]')
+            var sIContents = document.querySelectorAll('[data-tab-info]')
+
+            sIMethods.forEach(m => {
+                m.addEventListener('click', () => {
+                    var sITarget = document.querySelector(m.dataset.tabValue);
+
+                    sIContents.forEach(p => {
+                        p.classList.remove('active')
+                    })
+                    sITarget.classList.add('active');
+                })
+            })
+        </script>
     </div>
     <!-- Lock Screen Box -->
     <div id="lockScreen">
@@ -112,7 +139,10 @@
     <!-- Boot Elements -->
     <div class="boot">
         <img src="src/others/windowsLogo.svg" alt="Windows Logo" width="70" />
-        <img src="src/others/bootLoader.gif" alt="Windows boot loader" width="50" height="50" />
+        <picture>
+            <source srcset="src/others/bootLoader.svg">
+            <img src="src/others/bootLoader.gif" alt="Windows boot loader" width="50" height="50">
+        </picture>
     </div>
     <div class="boot-animation">
         <!-- does not work in google chrome if the video is not muted.
@@ -232,7 +262,7 @@
                     <figcaption>Whiteboard</figcaption>
                 </figure>
                 <figure id="startSnip">
-                    <img src="src/icons/snipSketch.png" alt="Windows Snipping Tool icon">
+                    <img src="src/icons/snipSketch.svg" alt="Windows Snipping Tool icon">
                     <figcaption>Snipping Tool</figcaption>
                 </figure>
                 <figure id="startMovies">
@@ -257,7 +287,7 @@
                 <img src="src/icons/user.png" alt="Windows 11 User icon">
                 <span>Rajaniraiyn</span>
             </div>
-            <a href="src/redirects/shutdown/logoff.html"><img src="src/icons/shutdown.png" alt="Windows 11 Shutdown icon" id="shutdown"></a>
+            <a href="src/redirects/shutdown/logoff.html"><img src="src/icons/shutdown.svg" alt="Windows 11 Shutdown icon" id="shutdown"></a>
         </div>
     </div>
     <div class="taskbar">
