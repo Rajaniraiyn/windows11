@@ -75,13 +75,13 @@ var timer = setInterval(() => {
     let date = new Date();
     let hours = date.getHours();
     let minute = date.getMinutes();
-    let timeString = hours + ":" + minute;
+    let timeString = hours.padStart(2,0) + ":" + minute.padStart(2,0);
     document.querySelector(".time").innerText = timeString;
     // making dynamic date
     let dayName = days.getDayName(date.getDay());
     let month = date.toLocaleString('en-us', { month: 'long' }); /* June */
     let year = date.getFullYear();
-    let dateString = dayName + ", " + month + ", " + year;
+    let dateString = dayName + ", " + month.padStart(2,0) + ", " + year.padStart(4,0);
     document.querySelector(".date").innerText = dateString;
 }, 1000);
 
