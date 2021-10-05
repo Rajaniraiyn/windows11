@@ -44,7 +44,7 @@
     },
     "settings": {
         "name": "Settings",
-        "src": "https://yashash.me/windows11-settings",
+        "src": "https://win11-settings.netlify.app",
         "icon": "src/icons/settings.svg"
     }
 }
