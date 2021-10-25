@@ -80,3 +80,8 @@ var PreImg = document.querySelector(".imagesToBePreloaded");
 for (var i = 0; i < wIds.length; i++) {
     PreImg.innerHTML += `<img src="src/wallpaper/img${wIds[i]}.webp" width="1" height="1" border="0">\n`
 }
+
+// fix for the issue #35
+window.onscroll = _ => {
+    scrollTo(0,0)
+}
