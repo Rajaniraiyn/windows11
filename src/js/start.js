@@ -1,11 +1,11 @@
 // for Start and Search
 document.addEventListener("click", (e) => {
     if (e.target == document.querySelector(".center img:nth-child(1)")) {
-        document.querySelector(".start").classList.add("show-start");
+        document.querySelector(".start").classList.toggle("show-start");
     } else if (e.target == document.getElementById("searchIcon")) {
         // making the search button at the taskbar work
         console.log("search icon clicked");
-        document.querySelector(".start").classList.add("show-start");
+        document.querySelector(".start").classList.toggle("show-start");
         //fixing weird start menu entry when search button clicked directly
         if (document.querySelector(".start").classList.contains("show-start")) {
             setTimeout(() => {
